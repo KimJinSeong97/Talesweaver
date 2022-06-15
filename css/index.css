@@ -4,19 +4,21 @@ nav {
     width: 100%;
     height: 60px;
     margin: 0 auto;
-    background-color: #333;
+    background-color: #000;
     position: fixed;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    z-index: 2;
 }
 
 nav .menu {
+    width: 50%;
     display: flex;
-    justify-content: flex-start;
 }
 
 nav .menu li {
-    padding: 22px;
+    width: 100%;
+    line-height: 60px;
     font-size: 14px;
     text-align: center;
 }
@@ -25,9 +27,14 @@ nav .menu li a {
     color: #ccc;
 }
 
+nav .menu li a:hover {
+    color: #fff;
+}
+
 nav .menu .sub_menu {
-    background-color: gray;
-    margin-top: 22px;
+    background-color: #000;
+    display: none;
+    z-index: 2;
 }
 
 nav .login_start {
@@ -47,13 +54,115 @@ nav .login_start li a {
 nav ul button {
     width: 150px;
     height: 40px;
+    margin-left: 30px;
+    cursor: pointer;
+    border: none;
+    transition: all ease-in 0.6s;
+}
+
+nav ul button:hover {
+    box-shadow: 150px 0 0 0 rgba(212, 87, 87, 1) inset;
 }
 
 #header_slide {
     width: 100%;
-    height: 660px;
-    background-color: orange;
+    height: 600px;
     margin: 0 auto;
+    position: relative;
+    top: 60px;
+    margin-bottom: 60px;
+}
+
+.slide_box1 {
+    width: 100%;
+    height: 600px;
+    background-image: url(../img/index/slide1.jpg);
+    background-position: center;
+    background-size: cover;
+    display: block;
+}
+
+.slide_box2 {
+    width: 100%;
+    height: 600px;
+    background-image: url(../img/index/slide2.jpg);
+    background-position: center;
+    background-size: cover;
+    display: none;
+}
+
+.slide_box3 {
+    width: 100%;
+    height: 600px;
+    background-image: url(../img/index/slide3.jpg);
+    background-position: center;
+    background-size: cover;
+    display: none;
+}
+
+.slide_text {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 115px;
+}
+
+.slide_text h2 {
+    font-size: 46px;
+    color: #fff;
+}
+
+.slide_text p {
+    font-size: 18px;
+    line-height: 35px;
+    color: #ddd;
+}
+
+#header_slide #intro {
+    width: 230px;
+    height: 55px;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+    transition: all ease-in 0.6s;
+}
+
+#header_slide #intro:hover {
+    box-shadow: 230px 0 0 0 rgba(212, 87, 87, 1) inset;
+}
+
+#button_box {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.slide_btn1 {
+    width: 50px;
+    height: 10px;
+    border: none;
+    margin: 10px;
+    cursor: pointer;
+    background-color: gray;
+}
+
+.slide_btn2 {
+    width: 50px;
+    height: 10px;
+    border: none;
+    margin: 10px;
+    cursor: pointer;
+    background-color: gray;
+}
+
+.slide_btn3 {
+    width: 50px;
+    height: 10px;
+    border: none;
+    margin: 10px;
+    cursor: pointer;
+    background-color: gray;
 }
 
 section {
