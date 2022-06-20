@@ -83,6 +83,7 @@ nav ul button:hover {
     position: relative;
     top: 60px;
     margin-bottom: 60px;
+    background-color: #000;
 }
 
 .slide_box1 {
@@ -161,7 +162,7 @@ nav ul button:hover {
     border: none;
     margin: 10px;
     cursor: pointer;
-    background-color: #fff;
+    background-color: gray;
 }
 
 .slide_btn2 {
@@ -249,7 +250,7 @@ section {
 }
 
 .cha_box {
-    width: 65%;
+    width: 1250px;
     height: 360px;
     margin: 0 auto;
     display: flex;
@@ -264,33 +265,97 @@ section {
     height: 360px;
 }
 
-.cha1_back {
-    display: none;
+.flip_card {
+    width: 280px;
+    height: 360px;
+    cursor: pointer;
 }
 
-/* .cha1:hover{
-    transform: rotateY(180deg);
-} */
+.flip_card_inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
 
+.flip_card:hover .flip_card_inner {
+    transform: rotateY(180deg);
+}
+
+.cha1,
+.cha1_back,
+.cha2,
+.cha2_back,
+.cha3,
+.cha3_back,
+.cha4,
+.cha4_back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.cha1,
+.cha2,
+.cha3,
+.cha4 {
+    top: 0;
+    left: 0;
+}
+
+.cha1_back,
+.cha2_back,
+.cha3_back,
+.cha4_back {
+    top: 0;
+    left: 0;
+    transform: rotateY(180deg);
+}
 
 .cha_name {
+    width: 280px;
     font-size: 24px;
     color: #666;
     margin-top: -90px;
 }
 
 .cha_eng_name {
+    width: 280px;
     font-size: 14px;
     font-weight: 600;
     color: #dda7ff;
     line-height: 30px;
 }
 
-
 .cha_info1 {
     width: 1200px;
     height: auto;
     margin: 0 auto;
+}
+
+.cha_info2 {
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    display: none;
+}
+
+.cha_info3 {
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    display: none;
+}
+
+.cha_info4 {
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    display: none;
 }
 
 .cha_left {
@@ -442,23 +507,59 @@ section {
     line-height: 30px;
 }
 
-
-
-
-
-
-
-
 #section2 {
     width: 100%;
     height: 900px;
-    background-color: palegoldenrod;
+    background-color: white;
+    margin: 0 auto;
 }
+
+#section2 #worldwrap{
+    width: 1200px;
+    height: 600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#section2 #worldwrap h2{
+    font-size: 52px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.worldview{
+    width: 100%;
+}
+
+.worldview>li{
+    width: 100%;
+    height: 600px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.worldview>li>img{
+    width: 100%;
+    height: 100%;
+}
+
+.worldview li:not(:first-child){
+    display: none;
+}
+
+
+
+
 
 #section3 {
     width: 100%;
     height: 750px;
     background-color: palegreen;
+    margin: 0 auto;
 }
 
 #section4 {

@@ -79,7 +79,8 @@
     </nav>
 
     <div id="header_slide">
-        <div class="slide_box1">
+
+        <div class="slide_box1 slide">
             <div class="slide_text">
                 <h2>이벤트 + 배틀</h2>
                 <p>실제 게임을 플레이하는 유저들은 온라인게임 환경에서 <br>
@@ -88,14 +89,14 @@
                     테일즈위버만의 새로운 재미를 느끼게 될 것입니다.</p>
                 <button id="intro">게임소개 바로가기</button>
                 <div id="button_box">
-                    <button class="slide_btn1"></button>
+                    <button class="slide_btn1" style="background-color: white;"></button>
                     <button class="slide_btn2"></button>
                     <button class="slide_btn3"></button>
                 </div>
             </div>
         </div>
 
-        <div class="slide_box2">
+        <div class="slide_box2 slide">
             <div class="slide_text">
                 <h2>독립 에피소드 시스템</h2>
                 <p>마치 일반적인 패키지 게임을 플레이할 때와 마찬가지의 감각으로 <br>
@@ -105,13 +106,13 @@
                 <button id="intro">게임소개 바로가기</button>
                 <div id="button_box">
                     <button class="slide_btn1"></button>
-                    <button class="slide_btn2"></button>
+                    <button class="slide_btn2" style="background-color: white;"></button>
                     <button class="slide_btn3"></button>
                 </div>
             </div>
         </div>
 
-        <div class="slide_box3">
+        <div class="slide_box3 slide">
             <div class="slide_text">
                 <h2>전투 시스템</h2>
                 <p>기존의 온라인 게임보다도 뛰어난 액션성을 바탕으로 <br>
@@ -122,7 +123,7 @@
                 <div id="button_box">
                     <button class="slide_btn1"></button>
                     <button class="slide_btn2"></button>
-                    <button class="slide_btn3"></button>
+                    <button class="slide_btn3" style="background-color: white;"></button>
                 </div>
             </div>
         </div>
@@ -141,40 +142,76 @@
                 <h2>캐릭터 선택</h2>
                 <p>다양한 개성을 가진 캐릭터들로 테일즈위버의 세계를 탐험 해보세요.</p>
                 <button>모든 캐릭터 보기</button>
+
                 <div class="cha_box">
-                    <span class="cha1">
-                        <img src="img/index/cha1.png" alt="cha1">
-                        <div class="cha_name">루시안 칼츠</div>
-                        <div class="cha_eng_name">Lucian Kaltz</div>
-                    </span>
+                    <div class="flip_card">
+                        <div class="flip_card_inner">
+                            <span class="cha1">
+                                <img src="img/index/cha1.png" alt="cha1">
+                                <div class="cha_name">루시안 칼츠</div>
+                                <div class="cha_eng_name">Lucian Kaltz</div>
+                            </span>
 
-                    <span class="cha1_back">
-                        <img src="img/index/cha1_hover.png" alt="cha1">
-                        <div class="cha_name" style="color: #fff;">루시안 칼츠</div>
-                        <div class="cha_eng_name">Lucian Kaltz</div>
-                    </span>
+                            <span class="cha1_back">
+                                <img src="img/index/cha1_hover.png" alt="cha1_hover">
+                                <div class="cha_name" style="color: #fff;">루시안 칼츠</div>
+                                <div class="cha_eng_name">Lucian Kaltz</div>
+                            </span>
+                        </div>
+                    </div>
 
-                    <span class="cha2">
-                        <img src="img/index/cha2.png" alt="cha2">
-                        <div class="cha_name">보리스 진네만</div>
-                        <div class="cha_eng_name">Boris Jineman</div>
-                    </span>
 
-                    <span class="cha3">
-                        <img src="img/index/cha3.png" alt="cha3">
-                        <div class="cha_name">티치엘 쥬스피앙</div>
-                        <div class="cha_eng_name">Tichiel Juspian</div>
-                    </span>
+                    <div class="flip_card">
+                        <div class="flip_card_inner">
+                            <span class="cha2">
+                                <img src="img/index/cha2.png" alt="cha2">
+                                <div class="cha_name">보리스 진네만</div>
+                                <div class="cha_eng_name">Boris Jineman</div>
+                            </span>
 
-                    <span class="cha4">
-                        <img src="img/index/cha4.png" alt="cha4">
-                        <div class="cha_name">밀라 네브라스카</div>
-                        <div class="cha_eng_name">Mila Nebraska</div>
-                    </span>
+                            <span class="cha2_back">
+                                <img src="img/index/cha2_hover.png" alt="cha2_hover">
+                                <div class="cha_name" style="color: #fff;">보리스 진네만</div>
+                                <div class="cha_eng_name">Boris Jineman</div>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="flip_card">
+                        <div class="flip_card_inner">
+                            <span class="cha3">
+                                <img src="img/index/cha3.png" alt="cha3">
+                                <div class="cha_name">티치엘 쥬스피앙</div>
+                                <div class="cha_eng_name">Tichiel Juspian</div>
+                            </span>
+
+                            <span class="cha3_back">
+                                <img src="img/index/cha3_hover.png" alt="cha3_hover">
+                                <div class="cha_name" style="color: #fff;">티치엘 쥬스피앙</div>
+                                <div class="cha_eng_name">Tichiel Juspian</div>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="flip_card">
+                        <div class="flip_card_inner">
+                            <span class="cha4">
+                                <img src="img/index/cha4.png" alt="cha4">
+                                <div class="cha_name">밀라 네브라스카</div>
+                                <div class="cha_eng_name">Mila Nebraska</div>
+                            </span>
+
+                            <span class="cha4_back">
+                                <img src="img/index/cha4_hover.png" alt="cha4_hover">
+                                <div class="cha_name" style="color: #fff;">밀라 네브라스카</div>
+                                <div class="cha_eng_name">Mila Nebraska</div>
+                            </span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="cha_info1">
 
+                <div class="cha_info1">
                     <div class="cha_left">
                         <img src="img/index/cha_img1.png" alt="cha_img1">
                     </div>
@@ -215,17 +252,156 @@
                     </div>
 
                 </div>
+
+                <div class="cha_info2">
+
+                    <div class="cha_left">
+                        <img src="img/index/cha_img2.png" alt="cha_img2">
+                    </div>
+
+                    <div class="cha_right">
+                        <img src="img/index/char_border1.png" alt="char_border1">
+                        <h3>아노마라드에서는 보기 드문 회청색 눈동자와 <br>
+                            허리까지 길게 늘어뜨린 짙은색 머리카락이 <br>
+                            인상적인 소년 검사로, <br>
+                            나이는 루시안과 같은 17세.
+                        </h3>
+
+                        <div class="ability">
+                            <h2>스킬</h2>
+                            <img src="img/index/skill4.png" alt="skill4">
+                            <img src="img/index/skill5.png" alt="skill5">
+                            <img src="img/index/skill6.png" alt="skill6">
+                        </div>
+
+                        <div class="skill_text1">
+                            <h2>붉은 달의 맹약</h2>
+                            <h3>효과 대상 : 자신</h3>
+                            <p>마력의 근본인 달의 힘을 자신의 활력을 대가로 빌려 일시적으로 강해질 수 있다.</p>
+                        </div>
+
+                        <div class="skill_text2">
+                            <h2>스매쉬 크러셔</h2>
+                            <h3>효과 대상 : 적 다수</h3>
+                            <p>지맥의 힘을 끝까지 끌어내어 적에게 강한 타격을 준다.</p>
+                        </div>
+
+                        <div class="skill_text3">
+                            <h2>프로즌 브레이크</h2>
+                            <h3>효과 대상 : 적 다수</h3>
+                            <p>공간마저 얼려버릴 듯한 윈터러의 냉기를 검에 응집시켜, 찰나의 시간안에 상대를 얼려버린다.</p>
+                        </div>
+                        <img src="img/index/char_border2.png" alt="char_border2">
+                    </div>
+
+                </div>
+
+                <div class="cha_info3">
+
+                    <div class="cha_left">
+                        <img src="img/index/cha_img3.png" alt="cha_img3">
+                    </div>
+
+                    <div class="cha_right">
+                        <img src="img/index/char_border1.png" alt="char_border1">
+                        <h3>17세. <br>
+                            언제나 최고의 행운이 함께 하는 <br>
+                            천진난만하고 귀여운 <br>
+                            사고뭉치 아가씨. <br>
+                        </h3>
+
+                        <div class="ability">
+                            <h2>스킬</h2>
+                            <img src="img/index/skill7.png" alt="skill7">
+                            <img src="img/index/skill8.png" alt="skill8">
+                            <img src="img/index/skill9.png" alt="skill9">
+                        </div>
+
+                        <div class="skill_text1">
+                            <h2>와이드 힐</h2>
+                            <h3>효과 대상 : 아군 다수</h3>
+                            <p>일정 영역의 유저 모두를 회복시켜준다. 몬스터에겐 사용할 수 없다.</p>
+                        </div>
+
+                        <div class="skill_text2">
+                            <h2>홀리볼트</h2>
+                            <h3>효과 대상 : 적 다수</h3>
+                            <p>적에게 성스러운 볼트를 발사한다.</p>
+                        </div>
+
+                        <div class="skill_text3">
+                            <h2>큐어</h2>
+                            <h3>효과 대상 : 아군 다수</h3>
+                            <p>일정 범위 안의 캐릭터의 나쁜 상태이상을 치료한다.</p>
+                        </div>
+                        <img src="img/index/char_border2.png" alt="char_border2">
+                    </div>
+
+                </div>
+
+                <div class="cha_info4">
+
+                    <div class="cha_left">
+                        <img src="img/index/cha_img4.png" alt="cha_img4">
+                    </div>
+
+                    <div class="cha_right">
+                        <img src="img/index/char_border1.png" alt="char_border1">
+                        <h3>24세. <br>
+                            해적들 사이에선 모르는 사람이 없을 정도로 <br>
+                            유명한 해적단 ‘붉은 사수’의 <br>
+                            젊고 유능한 여선장. <br>
+                        </h3>
+
+                        <div class="ability">
+                            <h2>스킬</h2>
+                            <img src="img/index/skill10.png" alt="skill10">
+                            <img src="img/index/skill11.png" alt="skill11">
+                            <img src="img/index/skill12.png" alt="skill12">
+                        </div>
+
+                        <div class="skill_text1">
+                            <h2>기합</h2>
+                            <h3>효과 대상 : 자신</h3>
+                            <p>공격 대미지를 일정 시간 증가시켜준다.</p>
+                        </div>
+
+                        <div class="skill_text2">
+                            <h2>붉은 사수의 포격</h2>
+                            <h3>효과 대상 : 적 다수</h3>
+                            <p>밀라의 해적단인 붉은 사수의 지원사격을 받는 특수행동. 공격을 할 때마다 유지비가 소모된다.</p>
+                        </div>
+
+                        <div class="skill_text3">
+                            <h2>크레이지 댄싱 바이퍼</h2>
+                            <h3>효과 대상 : 적 다수</h3>
+                            <p>빠른 속도로 춤을 추듯 적들을 유린하는 편술.</p>
+                        </div>
+                        <img src="img/index/char_border2.png" alt="char_border2">
+                    </div>
+
+                </div>
             </div>
+        </div>
+    </section>
 
+    <div id="section2">
 
-
-
+        <div id="worldwrap">
+            <h2>세계관</h2>
+            <ul class="worldview">
+                <li><img src="img/index/worldview1.png" alt="worldview1"></li>
+                <li><img src="img/index/worldview2.png" alt="worldview1"></li>
+            </ul>
+            <h3>테시스 Tecith<br>[지명, 행성]</h3>
+            <p>행성 전체가 엷은 대기층으로 둘러싸여 있어 기본적으로 생명체가 서식할 수 있는 환경을 갖추고 있으며 북반구와 남반구에 총 4개의 대륙을 중심으로 크고 작은 군도가 산재해 있다.</p>
         </div>
 
 
-    </section>
+    </div>
 
-    <div id="section2"></div>
+
+
 
     <div id="section3"></div>
 
