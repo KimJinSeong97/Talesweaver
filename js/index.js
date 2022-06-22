@@ -16,8 +16,9 @@ function slide() {
     if (i > 2) {
         i = 0;
     }
-    $(".slide").eq(i).stop().show();
-    $(".slide").eq(i - 1).stop().hide();
+
+    $(".slide").eq(i).stop().fadeIn()
+    $(".slide").eq(i - 1).stop().fadeOut();
 }
 
 setInterval(slide, 5000);
@@ -25,82 +26,65 @@ setInterval(slide, 5000);
 // slide btn click next slide
 $(function () {
     $(".slide_btn1").click(function () {
-        $(".slide_box1").css("display", "block");
-        $(".slide_box2").css("display", "none");
-        $(".slide_box3").css("display", "none");
+        $(".slide_box1").stop().fadeIn();
+        $(".slide_box2, .slide_box3").stop().fadeOut();
     });
 
     $(".slide_btn2").click(function () {
-        $(".slide_box1").css("display", "none");
-        $(".slide_box2").css("display", "block");
-        $(".slide_box3").css("display", "none");
+        $(".slide_box2").stop().fadeIn();
+        $(".slide_box3, .slide_box1").stop().fadeOut();
     });
 
     $(".slide_btn3").click(function () {
-        $(".slide_box1").css("display", "none");
-        $(".slide_box2").css("display", "none");
-        $(".slide_box3").css("display", "block");
+        $(".slide_box3").stop().fadeIn();
+        $(".slide_box1, .slide_box2").stop().fadeOut();
     });
 });
 
 // character click detail info
 $(function () {
     $(".cha1_back").click(function () {
-        $(".cha_info1").css("display", "block");
-        $(".cha_info2").css("display", "none");
-        $(".cha_info3").css("display", "none");
-        $(".cha_info4").css("display", "none");
+        $(".cha_info1").fadeIn();
+        $(".cha_info2, .cha_info3, .cha_info4").hide();
     });
 
     $(".cha2_back").click(function () {
-        $(".cha_info1").css("display", "none");
-        $(".cha_info2").css("display", "block");
-        $(".cha_info3").css("display", "none");
-        $(".cha_info4").css("display", "none");
+        $(".cha_info2").fadeIn();
+        $(".cha_info1, .cha_info3, .cha_info4").hide();
     });
 
     $(".cha3_back").click(function () {
-        $(".cha_info1").css("display", "none");
-        $(".cha_info2").css("display", "none");
-        $(".cha_info3").css("display", "block");
-        $(".cha_info4").css("display", "none");
+        $(".cha_info3").fadeIn();
+        $(".cha_info1, .cha_info2, .cha_info4").hide();
     });
 
     $(".cha4_back").click(function () {
-        $(".cha_info1").css("display", "none");
-        $(".cha_info2").css("display", "none");
-        $(".cha_info3").css("display", "none");
-        $(".cha_info4").css("display", "block");
+        $(".cha_info4").fadeIn();
+        $(".cha_info1, .cha_info2, .cha_info3").hide();
     });
 });
 
 // skill icon click explain
 $(function () {
     $(".cha_right .ability img:first-of-type").click(function () {
-        $(".skill_text1").css("display", "block");
-        $(".skill_text2").css("display", "none");
-        $(".skill_text3").css("display", "none");
+        $(".skill_text1").show();
+        $(".skill_text2, .skill_text3").hide();
         $(".cha_right .ability img:first-of-type").css("opacity", 1);
-        $(".cha_right .ability img:nth-of-type(2)").css("opacity", 0.5);
-        $(".cha_right .ability img:nth-of-type(3)").css("opacity", 0.5);
+        $(".cha_right .ability img:nth-of-type(2), .cha_right .ability img:nth-of-type(3)").css("opacity", 0.5);
     });
 
     $(".cha_right .ability img:nth-of-type(2)").click(function () {
-        $(".skill_text2").css("display", "block");
-        $(".skill_text1").css("display", "none");
-        $(".skill_text3").css("display", "none");
+        $(".skill_text2").show();
+        $(".skill_text1, .skill_text3").hide();
         $(".cha_right .ability img:nth-of-type(2)").css("opacity", 1)
-        $(".cha_right .ability img:first-of-type").css("opacity", 0.5);
-        $(".cha_right .ability img:nth-of-type(3)").css("opacity", 0.5);
+        $(".cha_right .ability img:first-of-type, .cha_right .ability img:nth-of-type(3)").css("opacity", 0.5);
     });
 
     $(".cha_right .ability img:nth-of-type(3)").click(function () {
-        $(".skill_text3").css("display", "block");
-        $(".skill_text1").css("display", "none");
-        $(".skill_text2").css("display", "none");
+        $(".skill_text3").show();
+        $(".skill_text1, .skill_text2").hide();
         $(".cha_right .ability img:nth-of-type(3)").css("opacity", 1)
-        $(".cha_right .ability img:first-of-type").css("opacity", 0.5);
-        $(".cha_right .ability img:nth-of-type(2)").css("opacity", 0.5);
+        $(".cha_right .ability img:first-of-type, .cha_right .ability img:nth-of-type(2)").css("opacity", 0.5);
     });
 });
 
@@ -108,30 +92,22 @@ $(function () {
 $(function () {
     $(".thumbnail img:first").click(function () {
         $(this).css("opacity", 1).css("border", "2px solid #96c7e9");
-        $(".thumbnail img:nth-of-type(2)").css("opacity", 0.5).css("border", "2px solid #bbb");
-        $(".thumbnail img:nth-of-type(3)").css("opacity", 0.5).css("border", "2px solid #bbb");
-        $(".worldview1").css("display", "block");
-        $(".worldview2").css("display", "none");
-        $(".worldview3").css("display", "none");
+        $(".thumbnail img:nth-of-type(2), .thumbnail img:nth-of-type(3)").css("opacity", 0.5).css("border", "2px solid #bbb");
+        $(".worldview1").fadeIn();
+        $(".worldview2, .worldview3").hide();
     });
 
     $(".thumbnail img:nth-of-type(2)").click(function () {
         $(this).css("opacity", 1).css("border", "2px solid #96c7e9");
-        $(".thumbnail img:first").css("opacity", 0.5).css("border", "2px solid #bbb");
-        $(".thumbnail img:nth-of-type(3)").css("opacity", 0.5).css("border", "2px solid #bbb");
-        $(".worldview2").css("display", "block");
-        $(".worldview1").css("display", "none");
-        $(".worldview3").css("display", "none");
+        $(".thumbnail img:first, .thumbnail img:nth-of-type(3)").css("opacity", 0.5).css("border", "2px solid #bbb");
+        $(".worldview2").fadeIn();
+        $(".worldview1, .worldview3").hide();
     });
 
     $(".thumbnail img:nth-of-type(3)").click(function () {
         $(this).css("opacity", 1).css("border", "2px solid #96c7e9");
-        $(".thumbnail img:first").css("opacity", 0.5).css("border", "2px solid #bbb");
-        $(".thumbnail img:nth-of-type(2)").css("opacity", 0.5).css("border", "2px solid #bbb");
-        $(".worldview3").css("display", "block");
-        $(".worldview1").css("display", "none");
-        $(".worldview2").css("display", "none");
+        $(".thumbnail img:first, .thumbnail img:nth-of-type(2)").css("opacity", 0.5).css("border", "2px solid #bbb");
+        $(".worldview3").fadeIn();
+        $(".worldview1, .worldview2").hide();
     });
 });
-
-
