@@ -8,6 +8,7 @@
     <title>테일즈위버 - 스토리가 살아있는 RPG</title>
 
     <link rel="icon" href="img/index/favicon.ico">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css">
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/index.css">
@@ -20,7 +21,7 @@
     <nav>
         <a href="#"><img src="img/index/logo.png" alt="logo"></a>
         <ul class="menu">
-            <li><a href="#">새소식</a>
+            <li id="menu"><a href="#">새소식</a>
                 <ul class="sub_menu">
                     <li><a href="#">공지사항</a></li>
                     <li><a href="#">업데이트</a></li>
@@ -30,7 +31,7 @@
                 </ul>
             </li>
 
-            <li><a href="#">게임소개</a>
+            <li id="menu"><a href="#">게임소개</a>
                 <ul class="sub_menu">
                     <li><a href="#">게임소개</a></li>
                     <li><a href="#">캐릭터</a></li>
@@ -40,7 +41,7 @@
                 </ul>
             </li>
 
-            <li><a href="#">커뮤니티</a>
+            <li id="menu"><a href="#">커뮤니티</a>
                 <ul class="sub_menu">
                     <li><a href="#">자유게시판</a></li>
                     <li><a href="#">공략게시판</a></li>
@@ -50,7 +51,7 @@
                 </ul>
             </li>
 
-            <li><a href="#">자료실</a>
+            <li id="menu"><a href="#">자료실</a>
                 <ul class="sub_menu">
                     <li><a href="#">다운로드</a></li>
                     <li><a href="#">갤러리</a></li>
@@ -60,7 +61,7 @@
                 </ul>
             </li>
 
-            <li><a href="#">고객지원</a>
+            <li id="menu"><a href="#">고객지원</a>
                 <ul class="sub_menu">
                     <li><a href="#">고객지원</a></li>
                     <li><a href="#">운영정책</a></li>
@@ -72,8 +73,8 @@
         </ul>
 
         <ul class="login_start">
-            <li><a href="#">넥슨 ID 로그인</a></li>
-            <button>게임시작</button>
+            <li><a href="#"><span><i class="fa-solid fa-circle-user"></i>넥슨 ID 로그인</span></a></li>
+            <li><img src="img/index/btn_game-start_off.png" alt="btn_game-start_off"></li>
         </ul>
     </nav>
 
@@ -82,12 +83,12 @@
             <div class="slide_text">
                 <h2>이벤트 + 배틀</h2>
                 <p>실제 게임을 플레이하는 유저들은 온라인게임 환경에서 <br>
-                    여러 플레이어가 함께 진행 가능한 드라마틱한 시나리오를 구현해주는 이벤트 시스템과 <br>
+                    함께 진행 가능한 시나리오를 구현해주는 이벤트 시스템과 <br>
                     기존의 온라인 게임과는 전혀 다른 박진감 넘치는 전투 시스템을 통해서 <br>
                     테일즈위버만의 새로운 재미를 느끼게 될 것입니다.</p>
                 <button id="intro">게임소개 바로가기</button>
                 <div id="button_box">
-                    <button class="slide_btn1" style="background-color: white;"></button>
+                    <button class="slide_btn1" style="background-color: #364393;"></button>
                     <button class="slide_btn2"></button>
                     <button class="slide_btn3"></button>
                 </div>
@@ -99,12 +100,12 @@
                 <h2>독립 에피소드 시스템</h2>
                 <p>마치 일반적인 패키지 게임을 플레이할 때와 마찬가지의 감각으로 <br>
                     온라인 상태에서 게임의 스토리를 진행하는 것이 가능합니다. <br>
-                    모든 캐릭터가 동일한 시나리오를 진행하는 것이 아니라 각 캐릭터마다 각기 다른 시나리오가 제공되기 때문에 <br>
+                    캐릭터마다 각기 다른 시나리오가 제공되기 때문에 <br>
                     어떤 캐릭터로 진행하는가에 따라서 새로운 이야기를 플레이 할 수 있습니다.</p>
                 <button id="intro">게임소개 바로가기</button>
                 <div id="button_box">
                     <button class="slide_btn1"></button>
-                    <button class="slide_btn2" style="background-color: white;"></button>
+                    <button class="slide_btn2" style="background-color: #364393;"></button>
                     <button class="slide_btn3"></button>
                 </div>
             </div>
@@ -121,7 +122,7 @@
                 <div id="button_box">
                     <button class="slide_btn1"></button>
                     <button class="slide_btn2"></button>
-                    <button class="slide_btn3" style="background-color: white;"></button>
+                    <button class="slide_btn3" style="background-color: #364393;"></button>
                 </div>
             </div>
         </div>
@@ -139,7 +140,7 @@
             <div class="cha_intro">
                 <h2>캐릭터 선택</h2>
                 <p>다양한 개성을 가진 캐릭터들로 테일즈위버의 세계를 탐험 해보세요.</p>
-                <button>모든 캐릭터 보기</button>
+                <button>캐릭터 바로가기</button>
 
                 <div class="cha_box">
                     <div class="flip_card">
@@ -157,7 +158,6 @@
                             </span>
                         </div>
                     </div>
-
 
                     <div class="flip_card">
                         <div class="flip_card_inner">
@@ -388,7 +388,8 @@
 
         <div class="worldview1">
             <h3>테시스 Tecith<br>[지명, 행성]</h3>
-            <p>행성 전체가 엷은 대기층으로 둘러싸여 있어 기본적으로 생명체가 서식할 수 있는 환경을 갖추고 있으며 <br>
+            <p>행성 전체가 엷은 대기층으로 둘러싸여 있어 <br>
+                기본적으로 생명체가 서식할 수 있는 환경을 갖추고 있으며 <br>
                 북반구와 남반구에 총 4개의 대륙을 중심으로 크고 작은 군도가 산재해 있다.</p>
         </div>
 

@@ -1,9 +1,34 @@
 // menu hover submenu on/off
 $(function () {
     $(".menu>li").mouseover(function () {
-        $(".sub_menu").stop().slideDown();
+        $(".sub_menu").stop().slideDown(250);
     }).mouseout(function () {
-        $(".sub_menu").stop().slideUp();
+        $(".sub_menu").stop().slideUp(250);
+    });
+});
+
+// menu hover color, background-color change
+$(function () {
+    $(".menu #menu").mouseover(function () {
+        $(this).children().css("color", "#ffd02c");
+    }).mouseout(function () {
+        $(this).children().css("color", "#99a4c6");
+    });
+});
+
+$(function () {
+    $(".menu #menu").mouseover(function () {
+        $(this).children(".sub_menu").css("background-color", "#2A3381");
+    }).mouseout(function () {
+        $(this).children(".sub_menu").css("background-color", "#364393");
+    });
+});
+
+$(function () {
+    $(".sub_menu li").mouseover(function () {
+        $(this).children('a').css("color", "#b579ff");
+    }).mouseout(function () {
+        $(this).children('a').css("color", "#99a4c6");
     });
 });
 
