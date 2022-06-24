@@ -4,7 +4,7 @@ nav {
     width: 100%;
     height: 60px;
     margin: 0 auto;
-    background-color: #191930;
+    background-color: #000;
     position: fixed;
     display: flex;
     justify-content: space-between;
@@ -27,7 +27,7 @@ nav .menu li a {
 }
 
 nav .menu .sub_menu {
-    background-color: #364393;
+    background-color: #000;
     display: none;
     z-index: 2;
 }
@@ -40,18 +40,18 @@ nav .login_start {
 
 nav .login_start li span {
     font-size: 19px;
-    color: #b579ff;
+    color: #7fa0ff;
 }
 
 nav .login_start li i {
     font-size: 20px;
     margin-right: 10px;
-    color: #b579ff;
+    color: #7fa0ff;
 }
 
 nav .login_start li a:hover span,
 nav .login_start li a:hover i {
-    color: #7fa0ff;
+    color: #b579ff;
 }
 
 nav .login_start li img {
@@ -59,22 +59,24 @@ nav .login_start li img {
     margin-left: 20px;
 }
 
-/* nav ul button {
-    width: 150px;
-    height: 40px;
+nav ul button {
+    width: 230px;
+    height: 60px;
     margin-left: 30px;
     cursor: pointer;
     border: none;
-    transition: all ease-in 0.3s;
-    color: #5f95bb;
-    font-size: 18px;
-    letter-spacing: 2px;
-} */
-
-/* nav ul button:hover {
-    box-shadow: 150px 0 0 0 #5f95bb inset;
+    transition: all 0.25s ease-out;
     color: #fff;
-} */
+    font-size: 38px;
+    letter-spacing: 1px;
+    background-color: #7fa0ff;
+    font-family: 'GongGothicBold';
+    font-style: italic;
+}
+
+nav ul button:hover {
+    box-shadow: 230px 0 0 0 #b579ff inset;
+}
 
 #header_slide {
     width: 100%;
@@ -135,6 +137,7 @@ nav .login_start li img {
 .slide_text h2 {
     font-size: 46px;
     color: #fff;
+    font-family: 'GongGothicBold';
 }
 
 .slide_text p {
@@ -150,16 +153,16 @@ nav .login_start li img {
     border: none;
     cursor: pointer;
     transition: all 0.25s ease-out;
-    color: #fff;
+    color: white;
     font-weight: 600;
     font-size: 18px;
     letter-spacing: 2px;
-    background-color: #364393;
+    background-color: #7fa0ff;
 }
 
 #header_slide #intro:hover {
-    box-shadow: 230px 0 0 0 #fff inset;
-    color: #364393;
+    box-shadow: 230px 0 0 0 #b579ff inset;
+    color: #fff;
 }
 
 #button_box {
@@ -175,7 +178,7 @@ nav .login_start li img {
     border: none;
     margin: 10px;
     cursor: pointer;
-    background-color: #fff;
+    background-color: gray;
 }
 
 .slide_btn2 {
@@ -184,7 +187,7 @@ nav .login_start li img {
     border: none;
     margin: 10px;
     cursor: pointer;
-    background-color: #fff;
+    background-color: gray;
 }
 
 .slide_btn3 {
@@ -193,7 +196,7 @@ nav .login_start li img {
     border: none;
     margin: 10px;
     cursor: pointer;
-    background-color: #fff;
+    background-color: gray;
 }
 
 section {
@@ -236,6 +239,7 @@ section {
 
 .cha_intro>h2 {
     font-size: 46px;
+    font-family: 'GongGothicBold';
 }
 
 .cha_intro>p {
@@ -255,12 +259,11 @@ section {
     font-weight: 600;
     font-size: 18px;
     letter-spacing: 2px;
-    background-color: #96c7e9;
+    background-color: #7fa0ff;
 }
 
 .cha_intro>button:hover {
-    box-shadow: 230px 0 0 0 #fff inset;
-    color: #96c7e9;
+    box-shadow: 230px 0 0 0 #b579ff inset;
 }
 
 .cha_box {
@@ -546,6 +549,7 @@ section {
     left: 50%;
     transform: translate(-50%);
     z-index: 1;
+    font-family: 'GongGothicBold';
 }
 
 #section2 .worldview1 {
@@ -624,11 +628,6 @@ section {
 
 .thumbnail img:not(:first-child) {
     opacity: 0.5;
-}
-
-.thumbnail img:hover {
-    transition: all 0.3s ease-out;
-    opacity: 1;
 }
 
 .thumb_text {
@@ -752,7 +751,7 @@ section {
 
 .info_chapter {
     width: 600px;
-    height: 450px;
+    height: 600px;
     background-color: white;
     float: right;
     margin-right: 275px;
@@ -764,39 +763,43 @@ section {
 }
 
 .info_chapter h2 {
-    width: 150px;
-    height: 60px;
     line-height: 60px;
-    background-color: #000;
-    font-size: 50px;
+    font-size: 46px;
     margin-top: 5%;
     text-align: center;
-    color: #fff;
+    font-family: 'GongGothicBold';
 }
 
 .info_chapter h3 {
-    font-size: 40px;
+    font-size: 38px;
     text-align: center;
-    margin: 1%;
     color: #96c7e9;
 }
 
 .info_chapter p {
-    width: 85%;
-    margin: 0 auto;
+    width: 100%;
     font-size: 14px;
-    line-height: 25px;
+    line-height: 30px;
     color: #666;
     text-align: center;
+    letter-spacing: -0.5px;
 }
 
 .info_chapter button {
-    width: 275px;
-    height: 65px;
+    width: 230px;
+    height: 55px;
+    cursor: pointer;
     border: none;
-    font-size: 18px;
-    background-color: #000;
+    transition: all 0.25s ease-out;
     color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 2px;
+    background-color: #7fa0ff;
+}
+
+.info_chapter button:hover {
+    box-shadow: 230px 0 0 0 #b579ff inset;
 }
 
 #section4 {
@@ -811,28 +814,29 @@ section {
 #section4 h2 {
     width: 1200px;
     margin: 0 auto;
-    text-align: left;
-    font-size: 52px;
-    padding-left: 4%;
     padding-top: 2%;
+    padding-bottom: 2%;
+    font-size: 46px;
+    font-family: 'GongGothicBold';
 }
 
 #event {
-    width: 1250px;
+    width: 100%;
     height: auto;
     margin: 0 auto;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
 }
 
 .main_event {
-    width: 40%;
+    width: 550px;
+    height: 600px;
 }
 
 .event_hover {
     width: 450px;
-    height: 411px;
+    height: 410px;
     overflow: hidden;
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
 }
@@ -840,7 +844,7 @@ section {
 .main_event img {
     width: 100%;
     height: auto;
-    transition: all 0.3s ease-in;
+    transition: all 0.25s ease-out;
 }
 
 .main_event img:hover {
@@ -848,39 +852,43 @@ section {
 }
 
 .sub_event {
-    width: 50%;
+    width: 650px;
+    height: 600px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
-.event_hover_sub {
+.sub_event li {
     width: 250px;
-    height: 300px;
+    height: 250px;
+}
+
+.overlay {
+    width: 250px;
+    height: 225px;
     overflow: hidden;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
 }
 
 .sub_event img {
     width: 100%;
     height: auto;
-    transition: all 0.3s ease-in;
+    transition: all 0.25s ease-out;
 }
 
-.sub_event img:hover {
+.sub_event .overlay:hover img {
     transform: scale(1.1);
 }
 
-.event_hover_sub {
-    margin: 0% 5% 5% 5%;
-}
-
 .text {
-    margin-top: 5%;
+    margin-top: 3%;
     font-size: 18px;
     letter-spacing: 1px;
 }
 
 .date {
-    margin-top: 1%;
+    margin-top: 1.5%;
     letter-spacing: -1px;
     color: #7489f6;
 }
