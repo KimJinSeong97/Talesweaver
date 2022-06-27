@@ -9,7 +9,7 @@ $(function () {
 
 // menu hover color, background-color change
 $(function () {
-    $(".menu #menu").mouseover(function () {
+    $(".menu .main_menu").mouseover(function () {
         $(this).children().css("color", "#ffd02c");
     }).mouseout(function () {
         $(this).children().css("color", "#99a4c6");
@@ -17,7 +17,7 @@ $(function () {
 });
 
 $(function () {
-    $(".menu #menu").mouseover(function () {
+    $(".menu .main_menu").mouseover(function () {
         $(this).children(".sub_menu").css("background-color", "#191930");
     }).mouseout(function () {
         $(this).children(".sub_menu").css("background-color", "#000");
@@ -48,7 +48,7 @@ function slide() {
 
 setInterval(slide, 5000);
 
-// slide btn click next slide
+// slide btn click slide fadein/out
 $(function () {
     $(".slide_btn1").click(function () {
         $(".slide_box1").stop().fadeIn();
@@ -92,21 +92,21 @@ $(function () {
 // skill icon click explain
 $(function () {
     $(".cha_right .ability img:first-of-type").click(function () {
-        $(".skill_text1").fadeIn("fast");
+        $(".skill_text1").show();
         $(".skill_text2, .skill_text3").hide();
         $(".cha_right .ability img:first-of-type").css("opacity", 1);
         $(".cha_right .ability img:nth-of-type(2), .cha_right .ability img:nth-of-type(3)").css("opacity", 0.5);
     });
 
     $(".cha_right .ability img:nth-of-type(2)").click(function () {
-        $(".skill_text2").fadeIn("fast");
+        $(".skill_text2").show();
         $(".skill_text1, .skill_text3").hide();
         $(".cha_right .ability img:nth-of-type(2)").css("opacity", 1)
         $(".cha_right .ability img:first-of-type, .cha_right .ability img:nth-of-type(3)").css("opacity", 0.5);
     });
 
     $(".cha_right .ability img:nth-of-type(3)").click(function () {
-        $(".skill_text3").fadeIn("fast");
+        $(".skill_text3").show();
         $(".skill_text1, .skill_text2").hide();
         $(".cha_right .ability img:nth-of-type(3)").css("opacity", 1)
         $(".cha_right .ability img:first-of-type, .cha_right .ability img:nth-of-type(2)").css("opacity", 0.5);
@@ -136,3 +136,7 @@ $(function () {
         $(".worldview1, .worldview2").hide();
     });
 });
+
+// $(function(){
+//     $("nav a img:first").css("display" ,"none")
+// })
