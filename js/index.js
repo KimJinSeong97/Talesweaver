@@ -1,9 +1,39 @@
 // menu hover submenu on/off
+// $(function () {
+//     $(".menu>li").mouseover(function () {
+//         $(".sub_menu").stop().slideDown(250);
+//     }).mouseout(function () {
+//         $(".sub_menu").stop().slideUp(250);
+//     });
+// });
+
+// 767 moblie-size menu click button
 $(function () {
-    $(".menu>li").mouseover(function () {
-        $(".sub_menu").stop().slideDown(250);
-    }).mouseout(function () {
-        $(".sub_menu").stop().slideUp(250);
+    $("#mobile_menu").click(function () {
+        $(".menu").slideToggle();
+    });
+});
+
+// 767 mobile-size menu
+$(function () {
+    $(".menu>li:first-child").click(function () {
+        $(".menu>li:first-child .sub_menu").stop().slideToggle();
+    });
+
+    $(".menu>li:nth-of-type(2)").click(function () {
+        $(".menu>li:nth-of-type(2) .sub_menu").stop().slideToggle();
+    });
+
+    $(".menu>li:nth-of-type(3)").click(function () {
+        $(".menu>li:nth-of-type(3) .sub_menu").stop().slideToggle();
+    });
+
+    $(".menu>li:nth-of-type(4)").click(function () {
+        $(".menu>li:nth-of-type(4) .sub_menu").stop().slideToggle();
+    });
+
+    $(".menu>li:nth-of-type(5)").click(function () {
+        $(".menu>li:nth-of-type(5) .sub_menu").stop().slideToggle();
     });
 });
 
@@ -136,7 +166,3 @@ $(function () {
         $(".worldview1, .worldview2").hide();
     });
 });
-
-// $(function(){
-//     $("nav a img:first").css("display" ,"none")
-// })
