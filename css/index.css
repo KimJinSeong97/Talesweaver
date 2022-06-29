@@ -174,7 +174,7 @@
     .slide_text p {
         width: 100%;
         margin: 0 auto;
-        font-size: 12.5px;
+        font-size: 14px;
         line-height: 35px;
         color: #ccc;
     }
@@ -234,7 +234,7 @@
 
     section {
         width: 100%;
-        height: 3800px;
+        height: 3700px;
         margin: 0 auto;
         background-image: url(../img/index/section_bg1.jpg);
         background-position: left;
@@ -418,7 +418,7 @@
 
     .cha_left {
         width: 90%;
-        height: 650px;
+        height: 550px;
         float: left;
         box-shadow: 20px 21px 30px rgb(44 63 100 / 49%);
         margin-left: 5%;
@@ -426,7 +426,7 @@
 
     .cha_left img {
         width: 100%;
-        height: 650px;
+        height: 550px;
     }
 
     .cha_right {
@@ -681,7 +681,7 @@
     }
 
     .thumb_text h4 {
-        width: 15%;
+        width: 17.5%;
         height: 33px;
         background-color: #fff;
         opacity: 0.8;
@@ -690,7 +690,7 @@
         text-align: center;
         line-height: 33px;
         letter-spacing: 2px;
-        font-size: 12px;
+        font-size: 13px;
         cursor: pointer;
     }
 
