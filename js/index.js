@@ -18,22 +18,42 @@ $(function () {
 $(function () {
     $(".menu>li:first-child").click(function () {
         $(".menu>li:first-child .sub_menu").stop().slideToggle();
+        $(".menu>li:nth-of-type(2) .sub_menu").stop().hide();
+        $(".menu>li:nth-of-type(3) .sub_menu").stop().hide();
+        $(".menu>li:nth-of-type(4) .sub_menu").stop().hide();
+        $(".menu>li:nth-of-type(5) .sub_menu").stop().hide();
     });
 
     $(".menu>li:nth-of-type(2)").click(function () {
         $(".menu>li:nth-of-type(2) .sub_menu").stop().slideToggle();
+        $(".menu>li:nth-of-type(1) .sub_menu").stop().hide();
+        $(".menu>li:nth-of-type(3) .sub_menu").stop().hide();
+        $(".menu>li:nth-of-type(4) .sub_menu").stop().hide();
+        $(".menu>li:nth-of-type(5) .sub_menu").stop().hide();
     });
 
     $(".menu>li:nth-of-type(3)").click(function () {
         $(".menu>li:nth-of-type(3) .sub_menu").stop().slideToggle();
+        $(".menu>li:nth-of-type(1) .sub_menu").stop().hide();
+        $(".menu>li:nth-of-type(2) .sub_menu").stop().hide();
+        $(".menu>li:nth-of-type(4) .sub_menu").stop().hide();
+        $(".menu>li:nth-of-type(5) .sub_menu").stop().hide();
     });
 
     $(".menu>li:nth-of-type(4)").click(function () {
         $(".menu>li:nth-of-type(4) .sub_menu").stop().slideToggle();
+        $(".menu>li:nth-of-type(1) .sub_menu").stop().hide();
+        $(".menu>li:nth-of-type(2) .sub_menu").stop().hide();
+        $(".menu>li:nth-of-type(3) .sub_menu").stop().hide();
+        $(".menu>li:nth-of-type(5) .sub_menu").stop().hide();
     });
 
     $(".menu>li:nth-of-type(5)").click(function () {
         $(".menu>li:nth-of-type(5) .sub_menu").stop().slideToggle();
+        $(".menu>li:nth-of-type(1) .sub_menu").stop().hide();
+        $(".menu>li:nth-of-type(2) .sub_menu").stop().hide();
+        $(".menu>li:nth-of-type(3) .sub_menu").stop().hide();
+        $(".menu>li:nth-of-type(4) .sub_menu").stop().hide();
     });
 });
 

@@ -951,13 +951,15 @@
     }
 
     footer #contain {
-        width: 65%;
+        width: 100%;
         height: 220px;
         margin: 0 auto;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         border-top: 4px solid #f2f2f2;
+        padding: 0 10%;
+        box-sizing: border-box;
     }
 
     footer h2 {
@@ -1880,6 +1882,7 @@
         width: 250px;
         height: 250px;
         cursor: pointer;
+        margin: 3.5%;
     }
 
     .overlay {
@@ -1920,13 +1923,15 @@
     }
 
     footer #contain {
-        width: 65%;
+        width: 100%;
         height: 220px;
         margin: 0 auto;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         border-top: 4px solid #f2f2f2;
+        padding: 0 10%;
+        box-sizing: border-box;
     }
 
     footer h2 {
