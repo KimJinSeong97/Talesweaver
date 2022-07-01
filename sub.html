@@ -15,6 +15,7 @@
 
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
     <script src="js/index.js"></script>
+    <script src="js/sub.js"></script>
 </head>
 
 <body>
@@ -127,9 +128,9 @@
 
     <article>
         <div class="tab">
-            <span>게임 오버뷰</span>
-            <span>시스템 사양</span>
-            <span>게임 리뷰</span>
+            <span class="tab1">게임 오버뷰</span>
+            <span class="tab2">시스템 사양</span>
+            <span class="tab3">게임 리뷰</span>
         </div>
 
         <div class="overview">
@@ -143,11 +144,102 @@
                 erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique
                 posuere.
             </p>
+
             <h3>스크린 샷 :</h3>
             <div class="shot">
                 <img src="img/sub/cover.png" alt="">
                 <img src="img/sub/cover.png" alt="">
                 <img src="img/sub/cover.png" alt="">
+            </div>
+            <i class="fa-solid fa-square-caret-left" id="prev"></i>
+            <i class="fa-solid fa-square-caret-right" id="next"></i>
+
+            <h4>트레일러 :</h4>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/n8L6nN7GlDU"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+
+        <div class="system">
+            <ul>
+                <li class="spec">최소 사양</li>
+                <li><i class="fa-solid fa-caret-right"></i>운영체제 : Window 7 64 비트</li>
+                <li><i class="fa-solid fa-caret-right"></i>CPU : Pentium4 3.0GHz 이상</li>
+                <li><i class="fa-solid fa-caret-right"></i>메모리 : 4GB 이상</li>
+                <li><i class="fa-solid fa-caret-right"></i>그래픽카드 : NVIDIA GeForce GTX 460 이상</li>
+                <li><i class="fa-solid fa-caret-right"></i>하드디스크 여유공간 : 15GB 이상</li>
+                <li><i class="fa-solid fa-caret-right"></i>DirectX 버전 : DirectX 9.0 이상</li>
+            </ul>
+
+            <ul>
+                <li class="spec">권장 사양</li>
+                <li><i class="fa-solid fa-caret-right"></i>운영체제 : Window 10 64 비트</li>
+                <li><i class="fa-solid fa-caret-right"></i>CPU : 인텔 코어 i5 이상</li>
+                <li><i class="fa-solid fa-caret-right"></i>메모리 : 8GB 이상</li>
+                <li><i class="fa-solid fa-caret-right"></i>그래픽카드 : NVIDIA GeForce GTX 1050 이상</li>
+                <li><i class="fa-solid fa-caret-right"></i>하드디스크 여유공간 : 50GB 이상</li>
+                <li><i class="fa-solid fa-caret-right"></i>DirectX 버전 : DirectX 11.0</li>
+            </ul>
+        </div>
+
+        <div class="review">
+            <div class="review_box">
+                <div class="box_header">
+                    <i class="fa-brands fa-facebook-square" style="color: rgb(0 111 205);"></i>
+                    <ul>
+                        <li class="sns_name">Facebook</li>
+                        <li class="when">June / 2022</li>
+                    </ul>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
+                    tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero
+                    vitae
+                    erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus
+                    tristique
+                    posuere.</p>
+                <h4>Full review</h4>
+                <img src="img/sub/facebook.png" alt="facebook">
+            </div>
+
+            <div class="review_box">
+                <div class="box_header">
+                    <i class="fa-brands fa-twitter-square" style="color: rgb(0 173 238);"></i>
+                    <ul>
+                        <li class="sns_name">Twitter</li>
+                        <li class="when">June / 2022</li>
+                    </ul>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
+                    tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero
+                    vitae
+                    erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus
+                    tristique
+                    posuere.</p>
+                <h4>Full review</h4>
+                <img src="img/sub/twitter.png" alt="twitter">
+            </div>
+
+            <div class="review_box">
+                <div class="box_header">
+                    <i class="fa-brands fa-instagram-square" style="color: rgb(238, 104, 144);"></i>
+                    <ul>
+                        <li class="sns_name">Instagram</li>
+                        <li class="when">June / 2022</li>
+                    </ul>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
+                    tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero
+                    vitae
+                    erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus
+                    tristique
+                    posuere.</p>
+                <h4>Full review</h4>
+                <img src="img/sub/instagram.png" alt="instagram">
+            </div>
+
+            <div class="review_btn">
+                <button>모든 리뷰 보기</button>
             </div>
         </div>
     </article>
