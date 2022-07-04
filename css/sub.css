@@ -1,612 +1,1897 @@
 @charset "UTF-8";
 
-body {
-    overflow-x: hidden;
-}
+@media (max-width:767px) {
+    body {
+        overflow-x: hidden;
+    }
 
-nav {
-    width: 100%;
-    height: 60px;
-    margin: 0 auto;
-    background-color: #000;
-    position: fixed;
-    display: flex;
-    justify-content: space-between;
-    z-index: 2;
-}
+    nav .menu >li a.click{
+        color: #ffd02c;
+    }
 
-nav a img {
-    margin-left: 15px;
-}
+    nav .menu li a{
+        color: #99a4c6;
+        transition: all 0.2s;
+    }
 
-nav #mobile_menu {
-    display: none;
-}
+    nav .menu>li:hover > a {
+        color: #ffd02c;
+    }
 
-nav .menu {
-    width: 50%;
-    display: flex;
-}
+    nav .sub_menu li a{
+        color: #99a4c6;
+    }
 
-nav .menu li {
-    width: 100%;
-    line-height: 60px;
-    text-align: center;
-    cursor: pointer;
-}
+    nav .sub_menu li:hover a{
+        color: #b579ff;
+    }
 
-nav .menu li a {
-    color: #99a4c6;
-}
+    nav {
+        width: 100%;
+        text-align: center;
+        background-color: #000;
+        position: fixed;
+        z-index: 2;
+    }
 
-nav .menu .sub_menu {
-    background-color: #000;
-    display: none;
-    z-index: 2;
-}
+    nav a img {
+        float: left;
+        margin-left: 15px;
+    }
 
-nav .login_start {
-    display: flex;
-    align-items: center;
-}
+    nav #mobile_menu {
+        font-size: 30px;
+        color: #99a4c6;
+        margin-top: 15px;
+        margin-right: 15px;
+        float: right;
+        cursor: pointer;
+    }
 
-nav .login_start span {
-    font-size: 19px;
-    color: #7fa0ff;
-}
+    nav .menu {
+        width: 100%;
+        background-color: #000;
+        margin-top: 60px;
+        display: none;
+    }
 
-nav .login_start i {
-    font-size: 20px;
-    margin-right: 10px;
-    color: #7fa0ff;
-}
+    nav .menu li {
+        width: 100%;
+        line-height: 60px;
+        text-align: center;
+        cursor: pointer;
+    }
 
-nav .login_start a:hover span,
-nav .login_start a:hover i {
-    color: #b579ff;
-}
+    nav .menu li a {
+        color: #99a4c6;
+    }
 
-nav .login_start img {
-    cursor: pointer;
-    margin-left: 20px;
-}
+    nav .menu .sub_menu {
+        background-color: #000;
+        display: none;
+        z-index: 2;
+    }
 
-nav button {
-    width: 230px;
-    height: 60px;
-    margin-left: 30px;
-    cursor: pointer;
-    border: none;
-    transition: all 0.25s ease-out;
-    color: #fff;
-    font-size: 38px;
-    letter-spacing: 1px;
-    background-color: #7fa0ff;
-    font-family: 'GongGothicBold';
-    font-style: italic;
-}
+    .main_menu:nth-of-type(1) .sub_menu {
+        height: 240px;
+    }
 
-nav button:hover {
-    box-shadow: 230px 0 0 0 #b579ff inset;
-}
+    .main_menu:nth-of-type(2) .sub_menu {
+        height: 180px;
+    }
 
-#background {
-    width: 100%;
-    height: 600px;
-    background-image: url(../img/sub/background.png);
-    background-position: center;
-    background-size: cover;
-    position: relative;
-    top: 60px;
-}
+    .main_menu:nth-of-type(4) .sub_menu {
+        height: 180px;
+    }
 
-.flower span {
-    width: 100%;
-    position: absolute;
-    transition-duration: 6500ms;
-}
+    nav .login_start {
+        display: none;
+        align-items: center;
+    }
 
-.flower1 img {
-    position: absolute;
-    top: -250px;
-    right: 10%;
-    animation: flower1 20s infinite ease-in-out;
-}
+    nav .login_start span {
+        font-size: 19px;
+        color: #7fa0ff;
+    }
 
-.flower2 img {
-    position: absolute;
-    top: -200px;
-    right: -5%;
-    animation: flower2 18s infinite ease-in-out;
-}
+    nav .login_start i {
+        font-size: 20px;
+        margin-right: 10px;
+        color: #7fa0ff;
+    }
 
-.flower3 img {
-    position: absolute;
-    top: -100px;
-    right: 5%;
-    animation: flower3 15s infinite ease-in;
-}
+    nav .login_start a:hover span,
+    nav .login_start a:hover i {
+        color: #b579ff;
+    }
 
-.flower4 img {
-    position: absolute;
-    top: -120px;
-    right: -20%;
-    animation: flower4 14s infinite ease-in;
-}
+    nav .login_start img {
+        cursor: pointer;
+        margin-left: 20px;
+    }
 
-.flower5 img {
-    position: absolute;
-    top: -200px;
-    right: 20%;
-    animation: flower5 10s infinite ease-in;
-}
+    nav button {
+        width: 230px;
+        height: 60px;
+        margin-left: 30px;
+        cursor: pointer;
+        border: none;
+        transition: all 0.25s ease-out;
+        color: #fff;
+        font-size: 38px;
+        letter-spacing: 1px;
+        background-color: #7fa0ff;
+        font-family: 'GongGothicBold';
+        font-style: italic;
+    }
 
-.flower6 img {
-    position: absolute;
-    top: -300px;
-    right: 50%;
-    animation: flower6 15s infinite ease-in;
-}
+    nav button:hover {
+        box-shadow: 230px 0 0 0 #b579ff inset;
+    }
 
-.flower7 img {
-    position: absolute;
-    top: -100px;
-    right: -20%;
-    animation: flower7 18s infinite ease-in;
-}
+    #background {
+        width: 100%;
+        height: 600px;
+        background-image: url(../img/sub/background.png);
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        top: 60px;
+    }
 
-.flower8 img {
-    position: absolute;
-    top: -120px;
-    right: -5%;
-    animation: flower8 18s infinite ease-in;
-}
+    .flower span {
+        width: 100%;
+        position: absolute;
+        transition-duration: 6500ms;
+    }
 
-.flower9 img {
-    position: absolute;
-    top: -230px;
-    right: 12.5%;
-    animation: flower9 19s infinite ease-in;
-}
+    .flower1 img {
+        position: absolute;
+        top: -250px;
+        right: 10%;
+        animation: flower1 20s infinite ease-in-out;
+    }
 
-.flower10 img {
-    position: absolute;
-    top: -150px;
-    right: -4%;
-    animation: flower10 20s infinite ease-in;
-}
+    .flower2 img {
+        position: absolute;
+        top: -200px;
+        right: -5%;
+        animation: flower2 18s infinite ease-in-out;
+    }
 
-@keyframes flower1 {
-    100% {
-        transform: translateX(-5000%) translateY(2500%) rotate(180deg);
+    .flower3 img {
+        position: absolute;
+        top: -100px;
+        right: 5%;
+        animation: flower3 15s infinite ease-in;
+    }
+
+    .flower4 img {
+        position: absolute;
+        top: -120px;
+        right: -20%;
+        animation: flower4 14s infinite ease-in;
+    }
+
+    .flower5 img {
+        position: absolute;
+        top: -200px;
+        right: 20%;
+        animation: flower5 10s infinite ease-in;
+    }
+
+    .flower6 img {
+        position: absolute;
+        top: -300px;
+        right: 50%;
+        animation: flower6 15s infinite ease-in;
+    }
+
+    .flower7 img {
+        position: absolute;
+        top: -100px;
+        right: -20%;
+        animation: flower7 18s infinite ease-in;
+    }
+
+    .flower8 img {
+        position: absolute;
+        top: -120px;
+        right: -5%;
+        animation: flower8 18s infinite ease-in;
+    }
+
+    .flower9 img {
+        position: absolute;
+        top: -230px;
+        right: 12.5%;
+        animation: flower9 19s infinite ease-in;
+    }
+
+    .flower10 img {
+        position: absolute;
+        top: -150px;
+        right: -4%;
+        animation: flower10 20s infinite ease-in;
+    }
+
+    @keyframes flower1 {
+        100% {
+            transform: translateX(-5000%) translateY(3500%) rotate(180deg);
+        }
+    }
+
+    @keyframes flower2 {
+        100% {
+            transform: translateX(-5000%) translateY(3200%) rotate(20deg);
+        }
+    }
+
+    @keyframes flower3 {
+        100% {
+            transform: translateX(-2000%) translateY(2200%) rotate(90deg);
+        }
+    }
+
+    @keyframes flower4 {
+        100% {
+            transform: translateX(-3500%) translateY(3200%) rotate(90deg);
+        }
+    }
+
+    @keyframes flower5 {
+        100% {
+            transform: translateX(-3500%) translateY(3200%) rotate(90deg);
+        }
+    }
+
+    @keyframes flower6 {
+        100% {
+            transform: translateX(-1000%) translateY(2200%) rotate(240deg);
+        }
+    }
+
+    @keyframes flower7 {
+        100% {
+            transform: translateX(-5000%) translateY(3500%) rotate(180deg);
+        }
+    }
+
+    @keyframes flower8 {
+        100% {
+            transform: translateX(-5000%) translateY(3500%) rotate(20deg);
+        }
+    }
+
+    @keyframes flower9 {
+        100% {
+            transform: translateX(-5000%) translateY(3500%) rotate(180deg);
+        }
+    }
+
+    @keyframes flower10 {
+        100% {
+            transform: translateX(-5000%) translateY(3500%) rotate(180deg);
+        }
+    }
+
+    .blank_space {
+        width: 100%;
+        height: 50px;
+        margin: 0 auto;
+    }
+
+    .game_info_box {
+        width: 90%;
+        height: 770px;
+        margin: 0 auto;
+        margin-bottom: -260px;
+        background-color: #fff;
+        padding: 2%;
+        position: absolute;
+        z-index: 1;
+        left: 3%;
+    }
+
+    .cover img {
+        width: 200px;
+        height: 280px;
+        margin-top: 5%;
+        margin-left: 11%;
+        margin-bottom: 20px;
+    }
+
+    .info_text {
+        width: 80%;
+        height: auto;
+        margin-left: 40px;
+    }
+
+    .info_text h2 {
+        font-family: 'GongGothicBold';
+        font-size: 34px;
+        line-height: 1.2;
+    }
+
+    .info_text h3 {
+        color: #999;
+        margin-bottom: 10px;
+        font-weight: 300;
+    }
+
+    .info_text span {
+        background-color: hsl(220deg 13% 95%);
+        color: #96c7e9;
+        font-size: 12px;
+        font-weight: 300;
+        padding: 2px 5px;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+    }
+
+    .info_text p {
+        font-size: 14px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        line-height: 1.4;
+        letter-spacing: 1px;
+        color: #666;
+    }
+
+    .info_text ul {
+        margin-top: 20px;
+    }
+
+    .info_text li {
+        margin-bottom: 10px;
+    }
+
+    .info_text li i {
+        margin-right: 10px;
+        color: #96c7e9;
+    }
+
+    .sns ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sns i {
+        font-size: 50px;
+        margin: 5px 10px;
+        cursor: pointer;
+    }
+
+    .sns i:hover {
+        opacity: 0.8;
+    }
+
+    article {
+        width: 100%;
+        height: 1800px;
+        margin: 0 auto;
+        background-color: #f2f3f5;
+        position: relative;
+    }
+
+    .tab {
+        width: 100%;
+        height: 30px;
+        margin: 0 auto;
+        position: absolute;
+        top: 325px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .tab span {
+        width: 75%;
+        font-size: 18px;
+        cursor: pointer;
+        left: 12.5%;
+        margin: 2%;
+    }
+
+    .tab1 {
+        border-bottom: 3px solid #96c7e9;
+    }
+
+    .overview {
+        position: absolute;
+        top: 500px;
+        width: 90%;
+        height: auto;
+        left: 5%;
+        overflow: hidden;
+    }
+
+    .overview h2 {
+        font-size: 22px;
+        margin-bottom: 10px;
+        font-family: 'GongGothicBold';
+    }
+
+    .overview p {
+        width: 100%;
+        font-size: 18px;
+        margin-bottom: 40px;
+        line-height: 1.4;
+        letter-spacing: 1px;
+        color: #666;
+    }
+
+    .overview h3 {
+        font-size: 22px;
+        margin-bottom: 20px;
+        font-family: 'GongGothicBold';
+    }
+
+    .overview .shot {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+    }
+
+    .overview .shot img {
+        width: 100%;
+        cursor: pointer;
+    }
+
+    .overview #prev,
+    #next {
+        font-size: 40px;
+        color: #96c7e9;
+        margin-top: 40px;
+        margin-bottom: 60px;
+        cursor: pointer;
+    }
+
+    .overview .fullshot img {
+        position: fixed;
+        width: 90%;
+        top: 20%;
+        left: 5%;
+        box-shadow: rgba(0, 0, 0, 0.5) 0 0 0 9999px;
+        z-index: 2;
+        display: none;
+    }
+
+    .exit {
+        position: fixed;
+        top: 20%;
+        z-index: 2;
+        display: none;
+        cursor: pointer;
+    }
+
+    .exit i {
+        font-size: 40px;
+        color: #96c7e9;
+    }
+
+    .overview h4 {
+        font-size: 22px;
+        margin-bottom: 20px;
+        font-family: 'GongGothicBold';
+    }
+
+    .overview iframe {
+        width: 100%;
+    }
+
+    .system {
+        position: absolute;
+        top: 475px;
+        width: 90%;
+        height: auto;
+        left: 5%;
+        display: flex;
+        flex-wrap: wrap;
+        display: none;
+    }
+
+    .system .spec {
+        color: #333;
+        font-size: 22px;
+        font-family: 'GongGothicBold';
+        margin-bottom: 10px;
+        margin-top: 25px;
+    }
+
+    .system i {
+        color: #96c7e9;
+        margin-right: 10px;
+    }
+
+    .system li {
+        margin-bottom: 10px;
+        color: #666;
+    }
+
+    .review {
+        position: absolute;
+        top: 500px;
+        width: 90%;
+        left: 5%;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        display: none;
+    }
+
+    .review_box {
+        width: 100%;
+        height: 440px;
+        background-color: #fff;
+        padding: 20px;
+        margin-bottom: 10px;
+    }
+
+    .box_header {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .box_header i {
+        font-size: 70px;
+        margin-right: 20px;
+    }
+
+    .box_header .sns_name {
+        font-size: 20px;
+        font-weight: 700;
+        width: 100%;
+        height: 20px;
+        line-height: 1.4;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+    }
+
+    .box_header .when {
+        font-size: 14px;
+        width: 100%;
+        height: 20px;
+        color: #999;
+        line-height: 1.4;
+        letter-spacing: 1px;
+    }
+
+    .review_box p {
+        height: 220px;
+        line-height: 1.4;
+        letter-spacing: 1px;
+        margin-bottom: 15px;
+    }
+
+    .review_box h4 {
+        margin-top: 75px;
+        font-size: 14px;
+        color: #666;
+    }
+
+    .review_box img {
+        width: 100px;
+        height: auto;
+        cursor: pointer;
+    }
+
+    .review_box img:hover {
+        opacity: 0.8;
+    }
+
+    .review_btn button {
+        width: 230px;
+        height: 55px;
+        cursor: pointer;
+        border: none;
+        transition: all 0.25s ease-out;
+        color: #fff;
+        font-weight: 600;
+        font-size: 18px;
+        letter-spacing: 2px;
+        background-color: #7fa0ff;
+        margin-top: 40px;
+    }
+
+    .review_btn button:hover {
+        box-shadow: 230px 0 0 0 #b579ff inset;
+    }
+
+    footer {
+        width: 100%;
+        height: 220px;
+        margin: 0 auto;
+    }
+
+    footer #contain {
+        width: 100%;
+        height: 220px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        border-top: 4px solid #f2f2f2;
+        padding: 0 10%;
+        box-sizing: border-box;
+    }
+
+    footer h2 {
+        margin-top: 2%;
+        margin-left: 1%;
+        margin-bottom: 1%;
+        font-size: 12px;
+        font-weight: 300;
+        letter-spacing: 1px;
+    }
+
+    footer h2 a {
+        color: #666;
+    }
+
+    footer address {
+        margin-left: 1%;
+        font-size: 11px;
+        letter-spacing: 0.5px;
+        font-style: normal;
+    }
+
+    footer address span {
+        margin-right: 10px;
+        color: #999;
+    }
+
+    footer h3 {
+        margin-left: 1%;
+        font-size: 11px;
+        color: #999;
+        letter-spacing: 0.5px;
+    }
+
+    .footer_logo {
+        margin: 1%;
+        display: flex;
+        align-items: center;
+    }
+
+    .footer_logo img {
+        margin-right: 10%;
     }
 }
 
-@keyframes flower2 {
-    100% {
-        transform: translateX(-5000%) translateY(2200%) rotate(20deg);
+@media (min-width:768px) and (max-width:1199px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    nav {
+        width: 100%;
+        text-align: center;
+        background-color: #000;
+        position: fixed;
+        z-index: 2;
+    }
+
+    nav #mobile_menu {
+        display: none;
+    }
+
+    nav .menu {
+        width: 100%;
+        display: flex;
+        background-color: #000;
+    }
+
+    nav .menu li {
+        width: 100%;
+        line-height: 60px;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    nav .menu li a {
+        color: #99a4c6;
+    }
+
+    nav .menu .sub_menu {
+        background-color: #000;
+        display: none;
+        z-index: 2;
+    }
+
+    nav .login_start {
+        display: none;
+        align-items: center;
+    }
+
+    nav .login_start span {
+        font-size: 19px;
+        color: #7fa0ff;
+    }
+
+    nav .login_start i {
+        font-size: 20px;
+        margin-right: 10px;
+        color: #7fa0ff;
+    }
+
+    nav .login_start a:hover span,
+    nav .login_start a:hover i {
+        color: #b579ff;
+    }
+
+    nav .login_start img {
+        cursor: pointer;
+        margin-left: 20px;
+    }
+
+    nav button {
+        width: 230px;
+        height: 60px;
+        margin-left: 30px;
+        cursor: pointer;
+        border: none;
+        transition: all 0.25s ease-out;
+        color: #fff;
+        font-size: 38px;
+        letter-spacing: 1px;
+        background-color: #7fa0ff;
+        font-family: 'GongGothicBold';
+        font-style: italic;
+    }
+
+    nav button:hover {
+        box-shadow: 230px 0 0 0 #b579ff inset;
+    }
+
+    #background {
+        width: 100%;
+        height: 600px;
+        background-image: url(../img/sub/background.png);
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        top: 60px;
+    }
+
+    .flower span {
+        width: 100%;
+        position: absolute;
+        transition-duration: 6500ms;
+    }
+
+    .flower1 img {
+        position: absolute;
+        top: -250px;
+        right: 10%;
+        animation: flower1 20s infinite ease-in-out;
+    }
+
+    .flower2 img {
+        position: absolute;
+        top: -200px;
+        right: -5%;
+        animation: flower2 18s infinite ease-in-out;
+    }
+
+    .flower3 img {
+        position: absolute;
+        top: -100px;
+        right: 5%;
+        animation: flower3 15s infinite ease-in;
+    }
+
+    .flower4 img {
+        position: absolute;
+        top: -120px;
+        right: -20%;
+        animation: flower4 14s infinite ease-in;
+    }
+
+    .flower5 img {
+        position: absolute;
+        top: -200px;
+        right: 20%;
+        animation: flower5 10s infinite ease-in;
+    }
+
+    .flower6 img {
+        position: absolute;
+        top: -300px;
+        right: 50%;
+        animation: flower6 15s infinite ease-in;
+    }
+
+    .flower7 img {
+        position: absolute;
+        top: -100px;
+        right: -20%;
+        animation: flower7 18s infinite ease-in;
+    }
+
+    .flower8 img {
+        position: absolute;
+        top: -120px;
+        right: -5%;
+        animation: flower8 18s infinite ease-in;
+    }
+
+    .flower9 img {
+        position: absolute;
+        top: -230px;
+        right: 12.5%;
+        animation: flower9 19s infinite ease-in;
+    }
+
+    .flower10 img {
+        position: absolute;
+        top: -150px;
+        right: -4%;
+        animation: flower10 20s infinite ease-in;
+    }
+
+    @keyframes flower1 {
+        100% {
+            transform: translateX(-5000%) translateY(3500%) rotate(180deg);
+        }
+    }
+
+    @keyframes flower2 {
+        100% {
+            transform: translateX(-5000%) translateY(3200%) rotate(20deg);
+        }
+    }
+
+    @keyframes flower3 {
+        100% {
+            transform: translateX(-2000%) translateY(2200%) rotate(90deg);
+        }
+    }
+
+    @keyframes flower4 {
+        100% {
+            transform: translateX(-3500%) translateY(3200%) rotate(90deg);
+        }
+    }
+
+    @keyframes flower5 {
+        100% {
+            transform: translateX(-3500%) translateY(3200%) rotate(90deg);
+        }
+    }
+
+    @keyframes flower6 {
+        100% {
+            transform: translateX(-1000%) translateY(2200%) rotate(240deg);
+        }
+    }
+
+    @keyframes flower7 {
+        100% {
+            transform: translateX(-5000%) translateY(3500%) rotate(180deg);
+        }
+    }
+
+    @keyframes flower8 {
+        100% {
+            transform: translateX(-5000%) translateY(3500%) rotate(20deg);
+        }
+    }
+
+    @keyframes flower9 {
+        100% {
+            transform: translateX(-5000%) translateY(3500%) rotate(180deg);
+        }
+    }
+
+    @keyframes flower10 {
+        100% {
+            transform: translateX(-5000%) translateY(3500%) rotate(180deg);
+        }
+    }
+
+    .blank_space {
+        width: 100%;
+        height: 360px;
+        margin: 0 auto;
+    }
+
+    .game_info_box {
+        width: 90%;
+        height: 350px;
+        margin: 0 auto;
+        margin-bottom: -260px;
+        background-color: #fff;
+        padding: 2%;
+        position: absolute;
+        z-index: 1;
+        left: 3%;
+    }
+
+    .cover img {
+        width: 200px;
+        height: 280px;
+        float: left;
+    }
+
+    .info_text {
+        width: 55%;
+        height: 100%;
+        margin-left: 40px;
+        float: left;
+    }
+
+    .info_text h2 {
+        font-family: 'GongGothicBold';
+        font-size: 34px;
+        line-height: 1.2;
+    }
+
+    .info_text h3 {
+        color: #999;
+        margin-bottom: 10px;
+        font-weight: 300;
+    }
+
+    .info_text span {
+        background-color: hsl(220deg 13% 95%);
+        color: #96c7e9;
+        font-size: 12px;
+        font-weight: 300;
+        padding: 2px 5px;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+    }
+
+    .info_text p {
+        font-size: 14px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        line-height: 1.4;
+        letter-spacing: 1px;
+        color: #666;
+    }
+
+    .info_text ul {
+        margin-top: 20px;
+    }
+
+    .info_text li {
+        margin-bottom: 10px;
+    }
+
+    .info_text li i {
+        margin-right: 10px;
+        color: #96c7e9;
+    }
+
+    .sns {
+        width: 60px;
+        height: 240px;
+        float: right;
+    }
+
+    .sns i {
+        font-size: 50px;
+        margin: 5px 10px;
+        cursor: pointer;
+    }
+
+    .sns i:hover {
+        opacity: 0.8;
+    }
+
+    article {
+        width: 100%;
+        height: 1450px;
+        margin: 0 auto;
+        background-color: #f2f3f5;
+        position: relative;
+    }
+
+    .tab {
+        width: 60%;
+        height: 30px;
+        margin: 0 auto;
+        position: absolute;
+        top: 250px;
+        left: 20%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .tab span {
+        font-size: 18px;
+        cursor: pointer;
+    }
+
+    .tab1 {
+        border-bottom: 3px solid #96c7e9;
+    }
+
+    .overview {
+        position: absolute;
+        top: 350px;
+        width: 90%;
+        height: auto;
+        left: 5%;
+        overflow: hidden;
+    }
+
+    .overview h2 {
+        font-size: 22px;
+        margin-bottom: 10px;
+        font-family: 'GongGothicBold';
+    }
+
+    .overview p {
+        width: 100%;
+        font-size: 18px;
+        margin-bottom: 40px;
+        line-height: 1.4;
+        letter-spacing: 1px;
+        color: #666;
+    }
+
+    .overview h3 {
+        font-size: 22px;
+        margin-bottom: 20px;
+        font-family: 'GongGothicBold';
+    }
+
+    .overview .shot {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+    }
+
+    .overview .shot img {
+        width: 30%;
+        margin-right: 5%;
+        cursor: pointer;
+    }
+
+    .overview #prev,
+    #next {
+        font-size: 40px;
+        color: #96c7e9;
+        margin-top: 40px;
+        margin-bottom: 60px;
+        cursor: pointer;
+    }
+
+    .overview .fullshot img {
+        position: fixed;
+        width: 80%;
+        top: 15%;
+        left: 10%;
+        box-shadow: rgba(0, 0, 0, 0.5) 0 0 0 9999px;
+        z-index: 2;
+        display: none;
+    }
+
+    .exit {
+        position: fixed;
+        top: 15%;
+        right: 3%;
+        z-index: 2;
+        display: none;
+        cursor: pointer;
+    }
+
+    .exit i {
+        font-size: 50px;
+        color: #96c7e9;
+    }
+
+    .overview h4 {
+        font-size: 22px;
+        margin-bottom: 20px;
+        font-family: 'GongGothicBold';
+    }
+
+    .overview iframe {
+        width: 65%;
+    }
+
+    .system {
+        position: absolute;
+        top: 350px;
+        width: 90%;
+        height: auto;
+        left: 5%;
+        display: flex;
+        justify-content: space-evenly;
+        display: none;
+    }
+
+    .system .spec {
+        color: #333;
+        font-size: 22px;
+        font-family: 'GongGothicBold';
+        margin-bottom: 10px;
+    }
+
+    .system i {
+        color: #96c7e9;
+        margin-right: 10px;
+    }
+
+    .system li {
+        width: 75%;
+        margin-bottom: 10px;
+        color: #666;
+    }
+
+    .review {
+        position: absolute;
+        top: 350px;
+        width: 90%;
+        left: 5%;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        display: none;
+    }
+
+    .review_box {
+        width: 26.5%;
+        height: 440px;
+        background-color: #fff;
+        padding: 20px;
+    }
+
+    .box_header {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .box_header i {
+        font-size: 70px;
+        margin-right: 20px;
+    }
+
+    .box_header .sns_name {
+        font-size: 20px;
+        font-weight: 700;
+        width: 100%;
+        height: 20px;
+        line-height: 1.4;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+    }
+
+    .box_header .when {
+        font-size: 14px;
+        width: 100%;
+        height: 20px;
+        color: #999;
+        line-height: 1.4;
+        letter-spacing: 1px;
+    }
+
+    .review_box p {
+        height: 220px;
+        line-height: 1.4;
+        letter-spacing: 1px;
+        margin-bottom: 15px;
+    }
+
+    .review_box h4 {
+        margin-top: 75px;
+        font-size: 14px;
+        color: #666;
+    }
+
+    .review_box img {
+        width: 100px;
+        height: auto;
+        cursor: pointer;
+    }
+
+    .review_box img:hover {
+        opacity: 0.8;
+    }
+
+    .review_btn button {
+        width: 230px;
+        height: 55px;
+        cursor: pointer;
+        border: none;
+        transition: all 0.25s ease-out;
+        color: #fff;
+        font-weight: 600;
+        font-size: 18px;
+        letter-spacing: 2px;
+        background-color: #7fa0ff;
+        margin-top: 40px;
+    }
+
+    .review_btn button:hover {
+        box-shadow: 230px 0 0 0 #b579ff inset;
+    }
+
+    footer {
+        width: 100%;
+        height: 220px;
+        margin: 0 auto;
+    }
+
+    footer #contain {
+        width: 100%;
+        height: 220px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        border-top: 4px solid #f2f2f2;
+        padding: 0 10%;
+        box-sizing: border-box;
+    }
+
+    footer h2 {
+        margin-top: 2%;
+        margin-left: 1%;
+        margin-bottom: 1%;
+        font-size: 12px;
+        font-weight: 300;
+        letter-spacing: 1px;
+    }
+
+    footer h2 a {
+        color: #666;
+    }
+
+    footer address {
+        margin-left: 1%;
+        font-size: 11px;
+        letter-spacing: 0.5px;
+        font-style: normal;
+    }
+
+    footer address span {
+        margin-right: 10px;
+        color: #999;
+    }
+
+    footer h3 {
+        margin-left: 1%;
+        font-size: 11px;
+        color: #999;
+        letter-spacing: 0.5px;
+    }
+
+    .footer_logo {
+        margin: 1%;
+        display: flex;
+        align-items: center;
+    }
+
+    .footer_logo img {
+        margin-right: 10%;
     }
 }
 
-@keyframes flower3 {
-    100% {
-        transform: translateX(-2000%) translateY(1200%) rotate(90deg);
+@media (min-width:1200px) {
+    body {
+        overflow-x: hidden;
     }
-}
 
-@keyframes flower4 {
-    100% {
-        transform: translateX(-3500%) translateY(2200%) rotate(90deg);
+    nav {
+        width: 100%;
+        height: 60px;
+        margin: 0 auto;
+        background-color: #000;
+        position: fixed;
+        display: flex;
+        justify-content: space-between;
+        z-index: 2;
     }
-}
 
-@keyframes flower5 {
-    100% {
-        transform: translateX(-3500%) translateY(2200%) rotate(90deg);
+    nav a img {
+        margin-left: 15px;
     }
-}
 
-@keyframes flower6 {
-    100% {
-        transform: translateX(-1000%) translateY(1200%) rotate(240deg);
+    nav #mobile_menu {
+        display: none;
     }
-}
 
-@keyframes flower7 {
-    100% {
-        transform: translateX(-5000%) translateY(2500%) rotate(180deg);
+    nav .menu {
+        width: 50%;
+        display: flex;
     }
-}
 
-@keyframes flower8 {
-    100% {
-        transform: translateX(-5000%) translateY(2500%) rotate(20deg);
+    nav .menu li {
+        width: 100%;
+        line-height: 60px;
+        text-align: center;
+        cursor: pointer;
     }
-}
 
-@keyframes flower9 {
-    100% {
-        transform: translateX(-5000%) translateY(2500%) rotate(180deg);
+    nav .menu li a {
+        color: #99a4c6;
     }
-}
 
-@keyframes flower10 {
-    100% {
-        transform: translateX(-5000%) translateY(2500%) rotate(180deg);
+    nav .menu .sub_menu {
+        background-color: #000;
+        display: none;
+        z-index: 2;
     }
-}
 
-.blank_space {
-    width: 100%;
-    height: 360px;
-    margin: 0 auto;
-}
+    nav .login_start {
+        display: flex;
+        align-items: center;
+    }
 
-.game_info_box {
-    width: 60%;
-    height: 280px;
-    margin: 0 auto;
-    margin-bottom: -260px;
-    background-color: #fff;
-    padding: 2%;
-    position: absolute;
-    z-index: 1;
-    left: 18%;
-}
+    nav .login_start span {
+        font-size: 19px;
+        color: #7fa0ff;
+    }
 
-.cover img {
-    width: 200px;
-    height: 280px;
-    float: left;
-}
+    nav .login_start i {
+        font-size: 20px;
+        margin-right: 10px;
+        color: #7fa0ff;
+    }
 
-.info_text {
-    width: 720px;
-    height: 100%;
-    margin-left: 40px;
-    float: left;
-}
+    nav .login_start a:hover span,
+    nav .login_start a:hover i {
+        color: #b579ff;
+    }
 
-.info_text h2 {
-    font-family: 'GongGothicBold';
-    font-size: 34px;
-    line-height: 1.2;
-}
+    nav .login_start img {
+        cursor: pointer;
+        margin-left: 20px;
+    }
 
-.info_text h3 {
-    color: #999;
-    margin-bottom: 10px;
-    font-weight: 300;
-}
+    nav button {
+        width: 230px;
+        height: 60px;
+        margin-left: 30px;
+        cursor: pointer;
+        border: none;
+        transition: all 0.25s ease-out;
+        color: #fff;
+        font-size: 38px;
+        letter-spacing: 1px;
+        background-color: #7fa0ff;
+        font-family: 'GongGothicBold';
+        font-style: italic;
+    }
 
-.info_text span {
-    background-color: hsl(220deg 13% 95%);
-    color: #96c7e9;
-    font-size: 12px;
-    font-weight: 300;
-    padding: 2px 5px;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
-}
+    nav button:hover {
+        box-shadow: 230px 0 0 0 #b579ff inset;
+    }
 
-.info_text p {
-    font-size: 14px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    line-height: 1.4;
-    letter-spacing: 1px;
-    color: #666;
-}
+    #background {
+        width: 100%;
+        height: 600px;
+        background-image: url(../img/sub/background.png);
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        top: 60px;
+    }
 
-.info_text ul {
-    margin-top: 20px;
-}
+    .flower span {
+        width: 100%;
+        position: absolute;
+        transition-duration: 6500ms;
+    }
 
-.info_text li {
-    margin-bottom: 10px;
-}
+    .flower1 img {
+        position: absolute;
+        top: -250px;
+        right: 10%;
+        animation: flower1 20s infinite ease-in-out;
+    }
 
-.info_text li i {
-    margin-right: 10px;
-    color: #96c7e9;
-}
+    .flower2 img {
+        position: absolute;
+        top: -200px;
+        right: -5%;
+        animation: flower2 18s infinite ease-in-out;
+    }
 
-.sns {
-    width: 60px;
-    height: 240px;
-    float: right;
-}
+    .flower3 img {
+        position: absolute;
+        top: -100px;
+        right: 5%;
+        animation: flower3 15s infinite ease-in;
+    }
 
-.sns i {
-    font-size: 50px;
-    margin: 5px 10px;
-    cursor: pointer;
-}
+    .flower4 img {
+        position: absolute;
+        top: -120px;
+        right: -20%;
+        animation: flower4 14s infinite ease-in;
+    }
 
-.sns i:hover {
-    opacity: 0.8;
-}
+    .flower5 img {
+        position: absolute;
+        top: -200px;
+        right: 20%;
+        animation: flower5 10s infinite ease-in;
+    }
 
-article {
-    width: 100%;
-    height: 1450px;
-    margin: 0 auto;
-    background-color: #f2f3f5;
-    position: relative;
-}
+    .flower6 img {
+        position: absolute;
+        top: -300px;
+        right: 50%;
+        animation: flower6 15s infinite ease-in;
+    }
 
-.tab {
-    width: 35%;
-    height: 30px;
-    margin: 0 auto;
-    position: absolute;
-    top: 250px;
-    left: 32.5%;
-    display: flex;
-    justify-content: space-evenly;
-}
+    .flower7 img {
+        position: absolute;
+        top: -100px;
+        right: -20%;
+        animation: flower7 18s infinite ease-in;
+    }
 
-.tab span {
-    font-size: 18px;
-    cursor: pointer;
-}
+    .flower8 img {
+        position: absolute;
+        top: -120px;
+        right: -5%;
+        animation: flower8 18s infinite ease-in;
+    }
 
-.tab1 {
-    border-bottom: 3px solid #96c7e9;
-}
+    .flower9 img {
+        position: absolute;
+        top: -230px;
+        right: 12.5%;
+        animation: flower9 19s infinite ease-in;
+    }
 
-.overview {
-    position: absolute;
-    top: 350px;
-    width: 65%;
-    height: auto;
-    left: 17.5%;
-    overflow: hidden;
-}
+    .flower10 img {
+        position: absolute;
+        top: -150px;
+        right: -4%;
+        animation: flower10 20s infinite ease-in;
+    }
 
-.overview h2 {
-    font-size: 22px;
-    margin-bottom: 10px;
-    font-family: 'GongGothicBold';
-}
+    @keyframes flower1 {
+        100% {
+            transform: translateX(-5000%) translateY(2500%) rotate(180deg);
+        }
+    }
 
-.overview p {
-    width: 75%;
-    font-size: 18px;
-    margin-bottom: 40px;
-    line-height: 1.4;
-    letter-spacing: 1px;
-    color: #666;
-}
+    @keyframes flower2 {
+        100% {
+            transform: translateX(-5000%) translateY(2200%) rotate(20deg);
+        }
+    }
 
-.overview h3 {
-    font-size: 22px;
-    margin-bottom: 20px;
-    font-family: 'GongGothicBold';
-}
+    @keyframes flower3 {
+        100% {
+            transform: translateX(-2000%) translateY(1200%) rotate(90deg);
+        }
+    }
 
-.overview .shot {
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-}
+    @keyframes flower4 {
+        100% {
+            transform: translateX(-3500%) translateY(2200%) rotate(90deg);
+        }
+    }
 
-.overview .shot img {
-    width: 30%;
-    margin-right: 5%;
-    cursor: pointer;
-}
+    @keyframes flower5 {
+        100% {
+            transform: translateX(-3500%) translateY(2200%) rotate(90deg);
+        }
+    }
 
-.overview #prev,
-#next {
-    font-size: 40px;
-    color: #96c7e9;
-    margin-top: 40px;
-    margin-bottom: 60px;
-    cursor: pointer;
-}
+    @keyframes flower6 {
+        100% {
+            transform: translateX(-1000%) translateY(1200%) rotate(240deg);
+        }
+    }
 
-.overview .fullshot img {
-    position: fixed;
-    width: 55%;
-    top: 7.5%;
-    left: 22.5%;
-    box-shadow: rgba(0, 0, 0, 0.5) 0 0 0 9999px;
-    z-index: 2;
-    display: none;
-}
+    @keyframes flower7 {
+        100% {
+            transform: translateX(-5000%) translateY(2500%) rotate(180deg);
+        }
+    }
 
-.exit {
-    position: fixed;
-    top: 7.5%;
-    right: 17.5%;
-    z-index: 2;
-    display: none;
-    cursor: pointer;
-}
+    @keyframes flower8 {
+        100% {
+            transform: translateX(-5000%) translateY(2500%) rotate(20deg);
+        }
+    }
 
-.exit i {
-    font-size: 50px;
-    color: #96c7e9;
-}
+    @keyframes flower9 {
+        100% {
+            transform: translateX(-5000%) translateY(2500%) rotate(180deg);
+        }
+    }
 
-.overview h4 {
-    font-size: 22px;
-    margin-bottom: 20px;
-    font-family: 'GongGothicBold';
-}
+    @keyframes flower10 {
+        100% {
+            transform: translateX(-5000%) translateY(2500%) rotate(180deg);
+        }
+    }
 
-.overview iframe {
-    width: 45%;
-}
+    .blank_space {
+        width: 100%;
+        height: 360px;
+        margin: 0 auto;
+    }
 
-.system {
-    position: absolute;
-    top: 350px;
-    width: 65%;
-    height: auto;
-    left: 17.5%;
-    display: flex;
-    justify-content: space-evenly;
-    display: none;
-}
+    .game_info_box {
+        width: 73%;
+        height: 280px;
+        margin: 0 auto;
+        margin-bottom: -260px;
+        background-color: #fff;
+        padding: 2%;
+        position: absolute;
+        z-index: 1;
+        left: 11.5%;
+    }
 
-.system .spec {
-    color: #333;
-    font-size: 22px;
-    font-family: 'GongGothicBold';
-    margin-bottom: 10px;
-}
+    .cover img {
+        width: 200px;
+        height: 280px;
+        float: left;
+    }
 
-.system i {
-    color: #96c7e9;
-    margin-right: 10px;
-}
+    .info_text {
+        width: 60%;
+        height: 100%;
+        margin-left: 40px;
+        float: left;
+    }
 
-.system li {
-    margin-bottom: 10px;
-    color: #666;
-}
+    .info_text h2 {
+        font-family: 'GongGothicBold';
+        font-size: 34px;
+        line-height: 1.2;
+    }
 
-.review {
-    position: absolute;
-    top: 350px;
-    width: 65%;
-    left: 17.5%;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    display: none;
-}
+    .info_text h3 {
+        color: #999;
+        margin-bottom: 10px;
+        font-weight: 300;
+    }
 
-.review_box {
-    width: 333px;
-    height: 366px;
-    background-color: #fff;
-    padding: 20px;
-}
+    .info_text span {
+        background-color: hsl(220deg 13% 95%);
+        color: #96c7e9;
+        font-size: 12px;
+        font-weight: 300;
+        padding: 2px 5px;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+    }
 
-.box_header {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
+    .info_text p {
+        font-size: 14px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        line-height: 1.4;
+        letter-spacing: 1px;
+        color: #666;
+    }
 
-.box_header i {
-    font-size: 70px;
-    margin-right: 20px;
-}
+    .info_text ul {
+        margin-top: 20px;
+    }
 
-.box_header .sns_name {
-    font-size: 20px;
-    font-weight: 700;
-    width: 100%;
-    height: 20px;
-    line-height: 1.4;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
-}
+    .info_text li {
+        margin-bottom: 10px;
+    }
 
-.box_header .when {
-    font-size: 14px;
-    width: 100%;
-    height: 20px;
-    color: #999;
-    line-height: 1.4;
-    letter-spacing: 1px;
-}
+    .info_text li i {
+        margin-right: 10px;
+        color: #96c7e9;
+    }
 
-.review_box p {
-    height: 220px;
-    line-height: 1.4;
-    letter-spacing: 1px;
-    margin-bottom: 15px;
-}
+    .sns {
+        width: 60px;
+        height: 240px;
+        float: right;
+    }
 
-.review_box h4 {
-    margin-top: 15px;
-    font-size: 14px;
-    color: #666;
-}
+    .sns i {
+        font-size: 50px;
+        margin: 5px 10px;
+        cursor: pointer;
+    }
 
-.review_box img {
-    width: 100px;
-    height: auto;
-}
+    .sns i:hover {
+        opacity: 0.8;
+    }
 
-.review_btn button {
-    width: 230px;
-    height: 55px;
-    cursor: pointer;
-    border: none;
-    transition: all 0.25s ease-out;
-    color: #fff;
-    font-weight: 600;
-    font-size: 18px;
-    letter-spacing: 2px;
-    background-color: #7fa0ff;
-    margin-top: 40px;
-}
+    article {
+        width: 100%;
+        height: 1450px;
+        margin: 0 auto;
+        background-color: #f2f3f5;
+        position: relative;
+    }
 
-.review_btn button:hover {
-    box-shadow: 230px 0 0 0 #b579ff inset;
-}
+    .tab {
+        width: 35%;
+        height: 30px;
+        margin: 0 auto;
+        position: absolute;
+        top: 250px;
+        left: 32.5%;
+        display: flex;
+        justify-content: space-evenly;
+    }
 
-footer {
-    width: 100%;
-    height: 220px;
-    margin: 0 auto;
-}
+    .tab span {
+        font-size: 18px;
+        cursor: pointer;
+    }
 
-footer #contain {
-    width: 65%;
-    height: 220px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    border-top: 4px solid #f2f2f2;
-}
+    .tab1 {
+        border-bottom: 3px solid #96c7e9;
+    }
 
-footer h2 {
-    margin-top: 2%;
-    margin-left: 1%;
-    margin-bottom: 1%;
-    font-size: 12px;
-    font-weight: 300;
-    letter-spacing: 1px;
-}
+    .overview {
+        position: absolute;
+        top: 350px;
+        width: 65%;
+        height: auto;
+        left: 17.5%;
+        overflow: hidden;
+    }
 
-footer h2 a {
-    color: #666;
-}
+    .overview h2 {
+        font-size: 22px;
+        margin-bottom: 10px;
+        font-family: 'GongGothicBold';
+    }
 
-footer address {
-    margin-left: 1%;
-    font-size: 11px;
-    letter-spacing: 0.5px;
-    font-style: normal;
-}
+    .overview p {
+        width: 75%;
+        font-size: 18px;
+        margin-bottom: 40px;
+        line-height: 1.4;
+        letter-spacing: 1px;
+        color: #666;
+    }
 
-footer address span {
-    margin-right: 10px;
-    color: #999;
-}
+    .overview h3 {
+        font-size: 22px;
+        margin-bottom: 20px;
+        font-family: 'GongGothicBold';
+    }
 
-footer h3 {
-    margin-left: 1%;
-    font-size: 11px;
-    color: #999;
-    letter-spacing: 0.5px;
-}
+    .overview .shot {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+    }
 
-.footer_logo {
-    margin: 1%;
-    display: flex;
-    align-items: center;
-}
+    .overview .shot img {
+        width: 30%;
+        margin-right: 5%;
+        cursor: pointer;
+    }
 
-.footer_logo img {
-    margin-right: 10%;
+    .overview #prev,
+    #next {
+        font-size: 40px;
+        color: #96c7e9;
+        margin-top: 40px;
+        margin-bottom: 60px;
+        cursor: pointer;
+    }
+
+    .overview .fullshot img {
+        position: fixed;
+        width: 55%;
+        top: 7.5%;
+        left: 22.5%;
+        box-shadow: rgba(0, 0, 0, 0.5) 0 0 0 9999px;
+        z-index: 2;
+        display: none;
+    }
+
+    .exit {
+        position: fixed;
+        top: 7.5%;
+        right: 17.5%;
+        z-index: 2;
+        display: none;
+        cursor: pointer;
+    }
+
+    .exit i {
+        font-size: 50px;
+        color: #96c7e9;
+    }
+
+    .overview h4 {
+        font-size: 22px;
+        margin-bottom: 20px;
+        font-family: 'GongGothicBold';
+    }
+
+    .overview iframe {
+        width: 50%;
+    }
+
+    .system {
+        position: absolute;
+        top: 350px;
+        width: 65%;
+        height: auto;
+        left: 17.5%;
+        display: flex;
+        justify-content: space-evenly;
+        display: none;
+    }
+
+    .system .spec {
+        color: #333;
+        font-size: 22px;
+        font-family: 'GongGothicBold';
+        margin-bottom: 10px;
+    }
+
+    .system i {
+        color: #96c7e9;
+        margin-right: 10px;
+    }
+
+    .system li {
+        margin-bottom: 10px;
+        color: #666;
+    }
+
+    .review {
+        position: absolute;
+        top: 350px;
+        width: 70%;
+        left: 15%;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        display: none;
+    }
+
+    .review_box {
+        width: 25%;
+        height: auto;
+        background-color: #fff;
+        padding: 2%;
+    }
+
+    .box_header {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .box_header i {
+        font-size: 70px;
+        margin-right: 20px;
+    }
+
+    .box_header .sns_name {
+        font-size: 20px;
+        font-weight: 700;
+        width: 100%;
+        height: 20px;
+        line-height: 1.4;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+    }
+
+    .box_header .when {
+        font-size: 14px;
+        width: 100%;
+        height: 20px;
+        color: #999;
+        line-height: 1.4;
+        letter-spacing: 1px;
+    }
+
+    .review_box p {
+        height: 220px;
+        line-height: 1.4;
+        letter-spacing: 1px;
+        margin-bottom: 15px;
+    }
+
+    .review_box h4 {
+        margin-top: 15px;
+        font-size: 14px;
+        color: #666;
+    }
+
+    .review_box img {
+        width: 100px;
+        height: auto;
+        cursor: pointer;
+    }
+
+    .review_box img:hover {
+        opacity: 0.8;
+    }
+
+    .review_btn button {
+        width: 230px;
+        height: 55px;
+        cursor: pointer;
+        border: none;
+        transition: all 0.25s ease-out;
+        color: #fff;
+        font-weight: 600;
+        font-size: 18px;
+        letter-spacing: 2px;
+        background-color: #7fa0ff;
+        margin-top: 40px;
+    }
+
+    .review_btn button:hover {
+        box-shadow: 230px 0 0 0 #b579ff inset;
+    }
+
+    footer {
+        width: 100%;
+        height: 220px;
+        margin: 0 auto;
+    }
+
+    footer #contain {
+        width: 65%;
+        height: 220px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        border-top: 4px solid #f2f2f2;
+    }
+
+    footer h2 {
+        margin-top: 2%;
+        margin-left: 1%;
+        margin-bottom: 1%;
+        font-size: 12px;
+        font-weight: 300;
+        letter-spacing: 1px;
+    }
+
+    footer h2 a {
+        color: #666;
+    }
+
+    footer address {
+        margin-left: 1%;
+        font-size: 11px;
+        letter-spacing: 0.5px;
+        font-style: normal;
+    }
+
+    footer address span {
+        margin-right: 10px;
+        color: #999;
+    }
+
+    footer h3 {
+        margin-left: 1%;
+        font-size: 11px;
+        color: #999;
+        letter-spacing: 0.5px;
+    }
+
+    .footer_logo {
+        margin: 1%;
+        display: flex;
+        align-items: center;
+    }
+
+    .footer_logo img {
+        margin-right: 10%;
+    }
 }

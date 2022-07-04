@@ -45,9 +45,13 @@
     nav .menu li a {
         color: #99a4c6;
     }
+    
+    nav .menu li:hover a {
+        color: #ffd02c;
+    }
 
     nav .menu .sub_menu {
-        background-color: #000;
+        background-color: #191930;
         display: none;
         z-index: 2;
     }

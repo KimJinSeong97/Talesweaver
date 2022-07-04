@@ -76,22 +76,25 @@ $(window).resize(function () {
 
 // menu hover color, background-color change
 $(function () {
-    $(".menu .main_menu").mouseover(function () {
-        $(this).children().css("color", "#ffd02c");
-    }).mouseout(function () {
-        $(this).children().css("color", "#99a4c6");
-    });
-});
+    // $(".menu .main_menu").mouseover(function () {
+    //     $(this).children().css("color", "#ffd02c");
+    // }).mouseout(function () {
+    //     $(this).children().css("color", "#99a4c6");
+    // });
 
-$(function () {
-    $(".menu .main_menu").mouseover(function () {
+    $(".menu .main_menu").click(function(){
+        $(this).children("a").addClass("click")
+        $(this).siblings().children("a").removeClass("click");
+        // $(this).children().css("color", "#ffd02c");
         $(this).children(".sub_menu").css("background-color", "#191930");
-    }).mouseout(function () {
-        $(this).children(".sub_menu").css("background-color", "#000");
-    });
-});
+    })
 
-$(function () {
+    // $(".menu .main_menu").mouseover(function () {
+    //     $(this).children(".sub_menu").css("background-color", "#191930");
+    // }).mouseout(function () {
+    //     $(this).children(".sub_menu").css("background-color", "#000");
+    // });
+
     $(".sub_menu li").mouseover(function () {
         $(this).children('a').css("color", "#b579ff");
     }).mouseout(function () {
