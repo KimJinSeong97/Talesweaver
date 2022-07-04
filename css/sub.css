@@ -243,12 +243,15 @@ nav button:hover {
 }
 
 .game_info_box {
-    width: 1120px;
+    width: 60%;
     height: 280px;
     margin: 0 auto;
     margin-bottom: -260px;
     background-color: #fff;
-    padding: 40px;
+    padding: 2%;
+    position: absolute;
+    z-index: 1;
+    left: 18%;
 }
 
 .cover img {
@@ -358,6 +361,7 @@ article {
     width: 65%;
     height: auto;
     left: 17.5%;
+    overflow: hidden;
 }
 
 .overview h2 {
@@ -367,6 +371,7 @@ article {
 }
 
 .overview p {
+    width: 75%;
     font-size: 18px;
     margin-bottom: 40px;
     line-height: 1.4;
@@ -381,8 +386,15 @@ article {
 }
 
 .overview .shot {
+    width: 100%;
+    margin: 0 auto;
     display: flex;
-    justify-content: space-around;
+}
+
+.overview .shot img {
+    width: 30%;
+    margin-right: 5%;
+    cursor: pointer;
 }
 
 .overview #prev,
@@ -394,10 +406,38 @@ article {
     cursor: pointer;
 }
 
+.overview .fullshot img {
+    position: fixed;
+    width: 55%;
+    top: 7.5%;
+    left: 22.5%;
+    box-shadow: rgba(0, 0, 0, 0.5) 0 0 0 9999px;
+    z-index: 2;
+    display: none;
+}
+
+.exit {
+    position: fixed;
+    top: 7.5%;
+    right: 17.5%;
+    z-index: 2;
+    display: none;
+    cursor: pointer;
+}
+
+.exit i {
+    font-size: 50px;
+    color: #96c7e9;
+}
+
 .overview h4 {
     font-size: 22px;
     margin-bottom: 20px;
     font-family: 'GongGothicBold';
+}
+
+.overview iframe {
+    width: 45%;
 }
 
 .system {
@@ -408,6 +448,7 @@ article {
     left: 17.5%;
     display: flex;
     justify-content: space-evenly;
+    display: none;
 }
 
 .system .spec {
@@ -435,6 +476,7 @@ article {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    display: none;
 }
 
 .review_box {
@@ -476,6 +518,7 @@ article {
 }
 
 .review_box p {
+    height: 220px;
     line-height: 1.4;
     letter-spacing: 1px;
     margin-bottom: 15px;
