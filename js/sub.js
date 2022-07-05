@@ -10,7 +10,7 @@ window.addEventListener('resize', detectMediaSize, false);
 
 detectMediaSize();
 
-// tab click
+// mobile size
 if (window.matchMedia("(max-width:767px)").matches) {
     $(function () {
         $(".tab1").click(function () {
@@ -39,6 +39,19 @@ if (window.matchMedia("(max-width:767px)").matches) {
             $(this).css("border-bottom", "3px solid #96c7e9");
             $(".tab1").css("border", "none");
             $(".tab2").css("border", "none");
+        });
+        // 스크린샷 슬라이드
+        $("#prev").click(function () {
+            $(".shot img:last").prependTo(".shot");
+            $(".shot").css({ marginLeft: "-100%" });
+            $(".shot").stop().animate({ marginLeft: 0 }, 500);
+        });
+
+        $("#next").click(function () {
+            $(".shot").stop().animate({ marginLeft: "-100%" }, 500, function () {
+                $(".shot img:first").appendTo(".shot");
+                $(".shot").css({ marginLeft: 0 });
+            })
         });
     });
 } else {
@@ -70,27 +83,7 @@ if (window.matchMedia("(max-width:767px)").matches) {
             $(".tab1").css("border", "none");
             $(".tab2").css("border", "none");
         });
-    });
-}
-
-// screenshot slide
-if (window.matchMedia("(max-width:767px)").matches) {
-    $(function () {
-        $("#prev").click(function () {
-            $(".shot img:last").prependTo(".shot");
-            $(".shot").css({ marginLeft: "-100%" });
-            $(".shot").stop().animate({ marginLeft: 0 }, 500);
-        });
-
-        $("#next").click(function () {
-            $(".shot").stop().animate({ marginLeft: "-100%" }, 500, function () {
-                $(".shot img:first").appendTo(".shot");
-                $(".shot").css({ marginLeft: 0 });
-            })
-        });
-    });
-} else {
-    $(function () {
+        // 스크린샷 슬라이드
         $("#prev").click(function () {
             $(".shot img:last").prependTo(".shot");
             $(".shot").css({ marginLeft: "-35%" });
@@ -106,7 +99,7 @@ if (window.matchMedia("(max-width:767px)").matches) {
     });
 }
 
-// screenshot zoom 
+// 스크린샷 확대
 $(function () {
     $(".shot1").click(function () {
         $(".ss1").show();
@@ -126,6 +119,7 @@ $(function () {
     });
 });
 
+// 닫기 버튼
 $(function () {
     $(".exit").click(function () {
         $(".ss1, .ss2, .ss3 , .ss4").hide();

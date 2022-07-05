@@ -5,27 +5,6 @@
         overflow-x: hidden;
     }
 
-    nav .menu >li a.click{
-        color: #ffd02c;
-    }
-
-    nav .menu li a{
-        color: #99a4c6;
-        transition: all 0.2s;
-    }
-
-    nav .menu>li:hover > a {
-        color: #ffd02c;
-    }
-
-    nav .sub_menu li a{
-        color: #99a4c6;
-    }
-
-    nav .sub_menu li:hover a{
-        color: #b579ff;
-    }
-
     nav {
         width: 100%;
         text-align: center;
@@ -66,10 +45,26 @@
         color: #99a4c6;
     }
 
+    nav .menu>li a.click {
+        color: #ffd02c;
+    }
+
+    nav .menu>li:hover>a {
+        color: #ffd02c;
+    }
+
     nav .menu .sub_menu {
         background-color: #000;
         display: none;
         z-index: 2;
+    }
+
+    nav .sub_menu li a {
+        color: #99a4c6;
+    }
+
+    nav .sub_menu li:hover a {
+        color: #b579ff;
     }
 
     .main_menu:nth-of-type(1) .sub_menu {
@@ -143,6 +138,7 @@
         width: 100%;
         position: absolute;
         transition-duration: 6500ms;
+        display: none;
     }
 
     .flower1 img {
