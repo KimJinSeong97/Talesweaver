@@ -1,17 +1,4 @@
-// resize
-function detectMediaSize() {
-    if (window.matchMedia('(min-width: 0px) and (max-width: 767px)').matches) {
-    } else if (window.matchMedia('(min-width: 768px) and (max-width: 1199px)').matches) {
-    } else {
-    }
-};
-
-window.addEventListener('resize', detectMediaSize, false);
-
-detectMediaSize();
-
 $(window).resize(function () {
-    location.reload();
     if (window.innerWidth < 768) {
         $(".menu").css("display", "none");
     } else {
@@ -88,7 +75,7 @@ if (window.matchMedia('(min-width: 0px) and (max-width: 767px)').matches) {
     });
 };
 
-// auto slide
+// 5초마다 자동 슬라이드
 let i = 0;
 
 function slide() {
